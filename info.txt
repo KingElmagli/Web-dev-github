@@ -39,8 +39,9 @@ This command sets the user email to "john.doe@example.com" globally for all repo
 
 (git config --global --edit)
 This command i.e. (git config --global --edit) allows you to edit the global configiration settings you set using the git config --global such as user name, email address, etc.
+
 (git branch -m (the new name) ) use this command to change the git branch name.
 
-
+(git checkout "branch name") to swith to a branch name type git then the branch name."
 
 
