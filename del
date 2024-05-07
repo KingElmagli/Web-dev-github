@@ -1,0 +1,24 @@
+[33mcommit 56eb0e772c04591b437aa01f3e63c25922fdd9c0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdelete[m[33m)[m
+Author: Mustafa Osman <elmaglimostafa@gmail.com>
+Date:   Tue May 7 16:56:35 2024 +0100
+
+    added a new git command
+
+[1mdiff --git a/deleting-data/file1.txt b/deleting-data/file1.txt[m
+[1mindex e16df61..cd9481d 100644[m
+[1m--- a/deleting-data/file1.txt[m
+[1m+++ b/deleting-data/file1.txt[m
+[36m@@ -1,2 +1,3 @@[m
+ some dummy text[m
+ more added text[m
+[32m+[m[32mmore dummier text[m
+\ No newline at end of file[m
+[1mdiff --git a/info.txt b/info.txt[m
+[1mindex fd427fa..3a7b81f 100644[m
+[1m--- a/info.txt[m
+[1m+++ b/info.txt[m
+[36m@@ -46,3 +46,4 @@[m [mThis command i.e. (git config --global --edit) allows you to edit the global con[m
+ [m
+ (git merge (branch name)) to integrate changes from one branch into another.[m
+ [m
+[32m+[m[32m(git show (branch name)) to show the status of the branch specified.[m
