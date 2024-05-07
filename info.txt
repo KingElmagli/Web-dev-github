@@ -1,0 +1,43 @@
+command prompt notes
+
+
+Dir is a directory, cd is change directory  after cd you write the name of the directory, (cd ..) will move one directory backward,
+(mkdir directory-name) is make directory, open a dir using cd dirName and then \ then the other directory \,
+to start an aplication use (start the appName), the (type) command alongside then the name of the file opens the file in the terminal,
+(del) is delete you can delete both fils and directories.
+(use tab for auto complete), (use colon + x to go back to command prompt from git)
+
+In Git, a repository is a collection of files, directories, and version control data stored in a specific location (either locally or remotely) to manage project history and collaboration.
+A folder that contains files and other folders is referred to as a directory.
+
+ git commands
+
+ This is a git commit! (a commit is a code snapshot)
+ We have a working directory i.e. the text file and a repository which is the tracking part git does.
+ Branch is where commits are stored, the master branch is the core place where the changes are saved
+
+ To run a git command in the terminal you should start with "git", 
+ To initialise a repository use (git init), to see your info about your current git project use (git status)
+
+ git add, adds the changes to the commit, and git commit creates the commit and adds it to the branch. 
+ another summary is  git add adds changes to the staging area, and git commit creates the commit and adds it to the branch.
+
+ (git add .) to add  everything, (git add file_name) to add a specific file.
+ (git commit -m "Your commit message here")
+
+ (git log)  It shows a history of all the commits that have been made in the repository, including information such as the commit hash, author, date, and commit message.
+
+(git config) is used for managing Git configuration settings i.e. set, get or delete. 
+For example, you can use (git config user.name "Your Name") to set your username in Git.
+
+(git config --global) sets global configuration values that apply across all repositories.
+For example git config --global user.email "john.doe@example.com"
+This command sets the user email to "john.doe@example.com" globally for all repositories on your machine.
+
+(git config --global --edit)
+This command i.e. (git config --global --edit) allows you to edit the global configiration settings you set using the git config --global such as user name, email address, etc.
+
+
+
+
+
