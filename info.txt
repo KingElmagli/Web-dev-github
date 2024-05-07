@@ -44,4 +44,5 @@ This command i.e. (git config --global --edit) allows you to edit the global con
 
 (git checkout "branch name") to swith to a branch name type git then the branch name."
 
+(git merge (branch name)) to integrate changes from one branch into another.
 
