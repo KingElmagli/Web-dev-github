@@ -44,6 +44,8 @@ This command i.e. (git config --global --edit) allows you to edit the global con
 
 (git checkout "branch name") to swith to a branch name type git then the branch name."
 
+ if you  use (git checkout -b) to create a new branch with the same name as a previously deleted branch, the new branch will be created from the same point where the old branch was deleted. 
+
 (git merge (branch name)) to integrate changes from one branch into another.
 
 (git show (branch name)) to show the status of the branch specified.
