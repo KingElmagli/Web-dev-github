@@ -12,6 +12,9 @@ A folder that contains files and other folders is referred to as a directory.
 
  git commands
 
+ (git init) i.e. initialise is a command used in Git to initialize a new, empty Git repository in a specified directory, git init is typically used when you are starting a new project or when you want to convert an existing project into a Git repository. After running git init, you can start adding files to your repository, commit changes, and track the history of your project using Git.
+ basically you can not use git commands before using (git init).
+
  This is a git commit! (a commit is a code snapshot)
  We have a working directory i.e. the text file and a repository which is the tracking part git does.
  Branch is where commits are stored, the master branch is the core place where the changes are saved
