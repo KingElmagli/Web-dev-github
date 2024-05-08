@@ -58,4 +58,4 @@ To delete a branch you have to checkout another branch than the one you want to 
 (git reset --hard HEAD~1)resets the current branch to the commit before the current HEAD. This means that it will remove any changes made after that commit 
 and move the HEAD pointer to the previous commit, this action is irreversible so be cautious when using this command.
 (git reset --hard HEAD~2 or 3 or 4)you could even jum back 2,3,4 or 5 commits and so on.
-this is how you jump back to later commits by in the same time deleting the later commits you've had.
+this is how you jump back to later commits whilist in the same time deleting the later commits you've had.
