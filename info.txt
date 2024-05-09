@@ -8,7 +8,7 @@ to start an aplication use (start the appName), the (type) command alongside the
 (use tab for auto complete), (use colon + x to go back to command prompt from git)
 
 In Git, a repository is a collection of files, directories, and version control data stored in a specific location (either locally or remotely) to manage project history and collaboration.
-A folder that contains files and other folders is referred to as a directory.
+A directory is a folder that contains files and other folders.
 
  git commands
 
@@ -59,3 +59,7 @@ To delete a branch you have to checkout another branch than the one you want to 
 and move the HEAD pointer to the previous commit, this action is irreversible so be cautious when using this command.
 (git reset --hard HEAD~2 or 3 or 4)you could even jum back 2,3,4 or 5 commits and so on.
 this is how you jump back to later commits whilist in the same time deleting the later commits you've had.
+
+GitHub
+Git repositories are called local repositories.
+GitHub repositories are called remote repositories.
