@@ -65,6 +65,15 @@ Git repositories are called local repositories.
 GitHub repositories are called remote repositories.
 
 (git remote add origin)basically tells git to add a connection to a remote repository (i.e. in gitHub) and following the git command you should paste the URL.
-When you run git remote add origin <URL>, you're telling Git to add a new remote repository named "origin" with the specified URL. 
+When you run git remote add origin <URL>, you're telling Git to add a new remote repository named "origin" with the specified URL.
+
 You can use any name you like, but if you don't specify a name, Git will automatically assign the name "origin" to the new remote.
 It's a convention to use the name origin in Git and thats because the origin remote is usually the repository that your local repository was cloned from or pushed to.
+
+(git push -u then "the specified name in the git remote command in this case origin" the "branch name")the -u is for setting upstreams"
+so git push origin main is our command.
+
+For windows use this command if you want to change or delete (the personal access token) which is a key which gives us access to our gitHub account via git.
+(git credential reject => ENTER
+host=github.com => ENTER
+protocol=https => ENTER)
