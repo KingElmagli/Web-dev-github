@@ -78,3 +78,6 @@ For windows use this command if you want to change or delete (your personal acce
 host=github.com => ENTER
 protocol=https => ENTER)
 you create a personal access token (note! anyone who has this token can access your repositories) by going to the settings then developer settings then personal access token.
+
+(git clone code (URL of the code from the remote repository i.e. github)) to clone a remote repository into a local repository and that is used in general to clone your repository in another computer and use git i.e. local repository on that computer.
+and that would copy everything in a new file but if you want everything to be copied to the same file you have ( type a (.) after the command) 
