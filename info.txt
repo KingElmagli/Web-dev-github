@@ -64,6 +64,9 @@ GitHub
 Git repositories are called local repositories.
 GitHub repositories are called remote repositories.
 
+A public repository means everyone on the internet can see this repository and you can choose who can commit.
+A private repository you can choose who can see and commit to this repository.
+
 (git remote add origin)basically tells git to add a connection to a remote repository (i.e. in gitHub) and following the git command you should paste the URL.
 When you run git remote add origin <URL>, you're telling Git to add a new remote repository named "origin" with the specified URL.
 
@@ -79,5 +82,5 @@ host=github.com => ENTER
 protocol=https => ENTER)
 you create a personal access token (note! anyone who has this token can access your repositories) by going to the settings then developer settings then personal access token.
 
-(git clone code (URL of the code from the remote repository i.e. github)) to clone a remote repository into a local repository and that is used in general to clone your repository in another computer and use git i.e. local repository on that computer.
+(git clone URL (URL of the code from the remote repository i.e. github)) to clone a remote repository into a local repository and that is used in general to clone your repository in another computer and use git i.e. local repository on that computer.
 and that would copy everything in a new file but if you want everything to be copied to the same file you have ( type a (.) after the command) 
