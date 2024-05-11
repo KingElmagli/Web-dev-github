@@ -75,6 +75,7 @@ It's a convention to use the name origin in Git and thats because the origin rem
 
 (git push -u then "the specified name in the git remote command in this case origin" then "the branch name")the -u is for setting upstreams"
 so git push origin main is our command.
+(git pull) does the opposite of git push, so it fetches changes from the remote repository to the local repository.
 
 For windows use this command if you want to change or delete (your personal access token) which is a key which gives us access to our gitHub account via git.
 (git credential reject => ENTER
