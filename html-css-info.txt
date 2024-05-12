@@ -1,0 +1,44 @@
+ to select an element by its id write the hash symbol followed by the id name*/
+ ctrl and / is shortcut for adding a comment*/
+
+  <!--metadata i.e. elements which are not visible in the page itself e.g. style element-->
+  <head>
+    <link href="day4.css" rel="stylesheet" />
+    <!--link elemnet is a void element i.e. self closing tag-->
+    <!--href for the refrences and rel for the relation-->
+    <!--link tag is diffrent from the anchor tag because anchor tag gives a clickable link while link tag links two pages together-->
+    <title>My daily challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+.daily-goals {
+  background-color: aliceblue;
+  border-radius: 4px;
+  margin: 10px;
+  padding: 6px;
+} 
+CSS box model: content, padding:(inside space): top, right, bottom, left; border: border radius border type border color;
+
+A link directs the user to another webpage or resource, while an anchor directs the user to a specific point within the same webpage. Both are used to improve navigation and user experience on websites.
+A class selector can be used for multiple elements whilist an id selector can only be used once and id is declared with a # and a class with a .
+
+Box-shadow property:
+Inset: this keyword creates an inset shadow making the shadow look like its inside the element, 
+offset-x: Specifies the horizontal distance of the shadow from the element. Positive values move the shadow to the right, while negative values move it to the left.
+offset-y: This value specifies the vertical distance of the shadow from the element
+blur-radius: This value specifies the blur radius of the shadow. The larger the value, the more blurred the shadow appears.
+spread-radius: This value specifies the spread radius of the shadow. Positive values cause the shadow to expand and grow bigger, while negative values cause it to shrink.
+color: This value specifies the color of the shadow. You can use named colors like red, hexadecimal codes like #ff0000, RGB values like rgb(255, 0, 0), or RGBA values like rgba(255, 0, 0, 0.5) for transparency.
+
+p {
+  font-family: "fira-sans", "times-new-Roman"; /* the second font is a fallback font*/
+  text-align: center;
+  color: rgb(83, 75, 75);
+}
+
+id's # are unique classes . are not
