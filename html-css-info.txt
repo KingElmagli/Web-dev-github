@@ -12,22 +12,30 @@
         >
 </p>
  
+ Also use google fonts to add any fonts to your page.
+
+
  Inline elements are HTML elements that are displayed inline with the surrounding content, meaning they do not start on a new line and only take up as much width as necessary. 
  Some common inline elements include <span>, <a>, <strong>, <em>, and <img>.
 
  Block level elements on the other hand start on a new line.
 
+The dislplay property can be used to change an element type from block to inline or inline-block...
 The <div> element in HTML is a generic container element that is used to group together other elements and to create logical divisions or sections within a webpage.
 The <div> element itself does not have any specific semantic meaning and is primarily used for styling purposes or to apply JavaScript functionality.
 
-
-the <span> element is an inline container used within elements, and it's used to highlight specific parts of the elements to apply styles to that part.'
+the <span> element is an inline container which is usually used within elements, and it's used to highlight specific parts of the elements to apply styles to that part.'
+the span elements can also be used in the same way like the div element if someone wants an inline container and viceversa
 
 e.g. <p>This is a <span id="highlighted-text">highlighted</span> word.</p>
 #highlighted-text {
   color: red;
   font-weight: bold;
 }
+
+The <nav> element in HTML is used to define a section of a webpage that contains navigation links. 
+
+In HTML, the <section> element is used to define sections or groupings of content within a webpage. It is a semantic HTML5 element that helps structure the content of a webpage in a meaningful way,
 
 Pseudo-classes, on the other hand, are keywords added to selectors that specify a special state of the selected element
 Some common pseudo-classes include :hover, :focus, :active, and :nth-child().
@@ -72,7 +80,7 @@ CSS box model content-
 (padding:(inside space): top, right, bottom, left; border: border radius border type border color;)
 padding is inside, margin is outside space.
 
-Box-shadow property:
+Box-shadow property: "horizontal offset e.g. 1px"  "vertical offset e.g. 1px" "blur radius e.g. 2px" "rgb(red, gree, blue)"
 Inset: this keyword creates an inset shadow making the shadow look like its inside the element, 
 offset-x: Specifies the horizontal distance of the shadow from the element. Positive values move the shadow to the right, while negative values move it to the left.
 offset-y: This value specifies the vertical distance of the shadow from the element
@@ -87,3 +95,7 @@ e.g. ...
 } colors (names(red), hexadecimal values(#rrggbb) rgb values(255, 0, 0) or hsl values(0, 100%, 50%))
 
 <pre></pre> <!--the preformatted tag is used to output anything between it as plain text, and &gt is greater than & lt is less than-->
+
+text-decoration: dashed or underlined or none etc...
+text-transform: capitalize or lowercase or uppercase or inheret etc...
+
