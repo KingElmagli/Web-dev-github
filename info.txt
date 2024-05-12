@@ -75,6 +75,7 @@ It's a convention to use the name origin in Git and thats because the origin rem
 
 (git push -u then "the specified name in the git remote command in this case origin" then "the branch name")the -u is for setting upstreams"
 so git push origin main is our command.
+
 (git pull) does the opposite of git push, so it fetches changes from the remote repository to the local repository.
 
 For windows use this command if you want to change or delete (your personal access token) which is a key which gives us access to our gitHub account via git.
@@ -85,3 +86,6 @@ you create a personal access token (note! anyone who has this token can access y
 
 (git clone URL (URL of the code from the remote repository i.e. github)) to clone a remote repository into a local repository and that is used in general to clone your repository in another computer and use git i.e. local repository on that computer.
 and that would copy everything in a new file but if you want everything to be copied to the same file you have ( type a (.) after the command) 
+
+(fork) a "fork" refers to making a personal copy of a repository owned by someone else. When you fork a repository, you create a duplicate of the original repository in your own GitHub account.
+(pull request) After you fork the repository and add the changes you want then if you want the owner of the forked repository to add the changes you made you can send a pull request and if the owner approves of you changes he can merge your code to the main branch.
