@@ -1,3 +1,44 @@
+<p>
+        Learn more about all available HTML elements on
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          >the MDN HTML element refrence</a
+        >
+</p>
+ 
+<p>
+        Learn more about CSS properties and values on
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+          >the MDN CSS property refrence.</a
+        >
+</p>
+ 
+ Inline elements are HTML elements that are displayed inline with the surrounding content, meaning they do not start on a new line and only take up as much width as necessary. 
+ Some common inline elements include <span>, <a>, <strong>, <em>, and <img>.
+
+ Block level elements on the other hand start on a new line.
+
+The <div> element in HTML is a generic container element that is used to group together other elements and to create logical divisions or sections within a webpage.
+The <div> element itself does not have any specific semantic meaning and is primarily used for styling purposes or to apply JavaScript functionality.
+
+
+the <span> element is an inline container used within elements, and it's used to highlight specific parts of the elements to apply styles to that part.'
+
+e.g. <p>This is a <span id="highlighted-text">highlighted</span> word.</p>
+#highlighted-text {
+  color: red;
+  font-weight: bold;
+}
+
+Pseudo-classes, on the other hand, are keywords added to selectors that specify a special state of the selected element
+Some common pseudo-classes include :hover, :focus, :active, and :nth-child().
+e.g. a:hover {
+  color: red;
+}
+
+Inheritance:  Inheritance is the mechanism by which styles applied to a parent element can be passed down to its children.
+For example, if you set the font size of the body element to 16px, all text content inside the body element (e.g., paragraphs, headings) will inherit that font size unless explicitly overridden.
+
+
  to select an element by its id write the hash symbol followed by the id name*/
  ctrl and / is shortcut for adding a comment*/
 
@@ -27,7 +68,9 @@ p {
 
 id's # are unique classes . are not
 
-CSS box model: content, padding:(inside space): top, right, bottom, left; border: border radius border type border color;
+CSS box model content-
+(padding:(inside space): top, right, bottom, left; border: border radius border type border color;)
+padding is inside, margin is outside space.
 
 Box-shadow property:
 Inset: this keyword creates an inset shadow making the shadow look like its inside the element, 
@@ -37,4 +80,10 @@ blur-radius: This value specifies the blur radius of the shadow. The larger the 
 spread-radius: This value specifies the spread radius of the shadow. Positive values cause the shadow to expand and grow bigger, while negative values cause it to shrink.
 color: This value specifies the color of the shadow. You can use named colors like red, hexadecimal codes like #ff0000, RGB values like rgb(255, 0, 0), or RGBA values like rgba(255, 0, 0, 0.5) for transparency.
 
-padding is inside, margin is outside space.
+In CSS, you can use the border property to define a border around an element. The border property can specify the width, style, and color of the border.
+e.g. ...
+#id {
+    border: [border-width] [border-style] [border-color];
+} colors (names(red), hexadecimal values(#rrggbb) rgb values(255, 0, 0) or hsl values(0, 100%, 50%))
+
+<pre></pre> <!--the preformatted tag is used to output anything between it as plain text, and &gt is greater than & lt is less than-->
