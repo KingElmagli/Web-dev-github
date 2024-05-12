@@ -16,16 +16,18 @@
     />
   </head>
 
-.daily-goals {
-  background-color: aliceblue;
-  border-radius: 4px;
-  margin: 10px;
-  padding: 6px;
-} 
-CSS box model: content, padding:(inside space): top, right, bottom, left; border: border radius border type border color;
-
 A link directs the user to another webpage or resource, while an anchor directs the user to a specific point within the same webpage. Both are used to improve navigation and user experience on websites.
 A class selector can be used for multiple elements whilist an id selector can only be used once and id is declared with a # and a class with a .
+
+p {
+  font-family: "fira-sans", "times-new-Roman"; /* the second font is a fallback font*/
+  text-align: center;
+  color: rgb(83, 75, 75);
+}
+
+id's # are unique classes . are not
+
+CSS box model: content, padding:(inside space): top, right, bottom, left; border: border radius border type border color;
 
 Box-shadow property:
 Inset: this keyword creates an inset shadow making the shadow look like its inside the element, 
@@ -35,10 +37,4 @@ blur-radius: This value specifies the blur radius of the shadow. The larger the 
 spread-radius: This value specifies the spread radius of the shadow. Positive values cause the shadow to expand and grow bigger, while negative values cause it to shrink.
 color: This value specifies the color of the shadow. You can use named colors like red, hexadecimal codes like #ff0000, RGB values like rgb(255, 0, 0), or RGBA values like rgba(255, 0, 0, 0.5) for transparency.
 
-p {
-  font-family: "fira-sans", "times-new-Roman"; /* the second font is a fallback font*/
-  text-align: center;
-  color: rgb(83, 75, 75);
-}
-
-id's # are unique classes . are not
+padding is inside, margin is outside space.
