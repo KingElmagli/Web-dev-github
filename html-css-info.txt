@@ -99,3 +99,21 @@ e.g. ...
 text-decoration: dashed or underlined or none etc...
 text-transform: capitalize or lowercase or uppercase or inheret etc...
 
+left to right is the main axis and top to bottom is the cross axis.
+
+[The CSS Flexbox] display: flex; allows us to manage the space or the way elements are aligned and positioned inside the flex container,
+the container or the element in which the display: flex; is in is the parent container and the elements inside it are the children.
+flex-direction: row or column; row is the default direction of flexbox, flex-direction: row-reverse or column-reverse; (row-reverse reverses the position of the elements in the cross axis and column-reverse does the same but in the main axis).
+
+flex-wrap: nowrap or wrap;  the default value of the flexbox is nowrap (is a property in CSS that allows you to wrap flex items to a new line when there is not enough space to fit them in a single line. and nowrap means that the items will not wrap into a new line)
+
+flex-flow:row nowrap, is combination of both flex-direction and flex-wrap so its a shortcut.
+
+justify-content: ; and align-items: ; values (center or flex-start or flex-end or stretch or space-between or space-evenly etc...)
+flex-start is the default value.
+align-content: ; is the same as align-items: ; but align-items is used when there is only one line of items but align-content is used when there are multiple lines of items.
+gap: ;
+
+the difference between justify-content and align-items is that;
+justify-content is used to specify how items within a flexbox or grid container should be aligned along the main axis.
+align-items is used to specify how items within a flexbox or grid container should be aligned along the cross axis.
