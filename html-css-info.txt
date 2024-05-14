@@ -81,6 +81,7 @@ CSS box model content-
 padding is inside, margin is outside space.
 
 Box-shadow property: "horizontal offset e.g. 1px"  "vertical offset e.g. 1px" "blur radius e.g. 2px" "rgb(red, gree, blue)"
+
 Inset: this keyword creates an inset shadow making the shadow look like its inside the element, 
 offset-x: Specifies the horizontal distance of the shadow from the element. Positive values move the shadow to the right, while negative values move it to the left.
 offset-y: This value specifies the vertical distance of the shadow from the element
@@ -117,3 +118,35 @@ gap: ;
 the difference between justify-content and align-items is that;
 justify-content is used to specify how items within a flexbox or grid container should be aligned along the main axis.
 align-items is used to specify how items within a flexbox or grid container should be aligned along the cross axis.
+
+background-image: url(/images/places/ocean.jpg) this property in css allows you to add an image as a Background image.
+background-position: center; to make the image centered.
+background-size: cover; to make the image's size just cover the entire page.
+
+Opacity is a CSS property that allows you to control the transparency or opacity of an element. It's a value that ranges from 0 (fully transparent) to 1 (fully opaque) the values are 0.1 0.2 etc...
+in the rgba() the a is opacity
+
+position: static; Position is a CSS property that allows you to control the placement of an element within its containing element or the browser window.
+the default position is static, but there are 5 values: 1.static, 2.relative, 3.absolute, 4.fixed, 5.sticky
+
+Static (Default):
+Positioned based on the normal document flow.
+Not affected by top, right, bottom, left, or z-index properties.
+
+Relative:
+Positioned relative to their normal position in the document flow.
+Can be offset from their original position using top, right, bottom, and left properties.
+
+Absolute:
+Positioned relative to their nearest positioned ancestor (or the initial containing block if no ancestor is positioned).
+Removed from the normal document flow and do not affect other elements' positions.
+
+Fixed:
+Elements with position: fixed; are positioned relative to the viewport (the browser window or the user's screen).
+They are removed from the normal document flow and do not affect other elements' positions.
+
+top: 20px;
+bottom: 10px;
+right: 10px;
+left: 20px;
+
