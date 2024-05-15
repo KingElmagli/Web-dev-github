@@ -150,3 +150,32 @@ bottom: 10px;
 right: 10px;
 left: 20px;
 
+The percentage value is relative to its parent element so 100% means cover the entire element.
+e.g. width: 50%; will take 50% of the parent element etc...
+
+The box-sizing property is a CSS property that determines how the width and height of an element are calculated and applied.
+the box-sizing property has three values, content-box(default), border-box and inherit.
+
+In conten-box the padding and the border increases the width,
+but in border-box the padding and the border is taken from the width,
+and inherit means that the element will inherit the value of that property from its parent element, so if the property of its parent element was border-box would it also be border-box
+
+note! the content-sizing property does not apply to margin i.e. it doesn't affect the margin it only applies to content, padding and border.
+
+the <img src"" alt""> img element normally has an src""attribute and alt"" alternative.
+the <p> <strong> Mustafa</strong></p> is an inline element which be used to turn its content to bold.
+
+object-fit is a CSS property that allows you to control how an image or other element is resized to fit its container.
+When you set object-fit on an element, you can specify how the element should be resized to fit its container.
+The possible values are:
+
+1.cover: Scale the element to cover the entire container, while maintaining its aspect ratio. This means that some parts of the element may be cropped.
+
+2.contain: Scale the element to fit within the container, while maintaining its aspect ratio. This means that the element may not fill the entire container, but it will not be cropped.
+
+3.fill: Scale the element to fill the entire container, while maintaining its aspect ratio. This means that the element will be stretched to fit the container, and some parts of it may be distorted.
+
+4.scale-down: Scale the element down to fit within the container, while maintaining its aspect ratio. If the element is larger than the container, it will be scaled down to fit.
+
+the difference between scale-down and cover, cover will make make the image cover the entire container and if the image is larger it will be cropped down and if its smaller it will be stretched to fit the container,
+but with scale down it does the same except that if the image is smaller it will not be stretched to fit the container
