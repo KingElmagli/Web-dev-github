@@ -14,6 +14,7 @@
  
  Also use google fonts to add any fonts to your page.
 
+note!= when linking a HTML file to multple CSS files and those CSS files have different values for the same element the later link would overwrite the links before it in the HTML head.
 
  Inline elements are HTML elements that are displayed inline with the surrounding content, meaning they do not start on a new line and only take up as much width as necessary. 
  Some common inline elements include <span>, <a>, <strong>, <em>, and <img>.
@@ -178,4 +179,27 @@ The possible values are:
 4.scale-down: Scale the element down to fit within the container, while maintaining its aspect ratio. If the element is larger than the container, it will be scaled down to fit.
 
 the difference between scale-down and cover, cover will make make the image cover the entire container and if the image is larger it will be cropped down and if its smaller it will be stretched to fit the container,
-but with scale down it does the same except that if the image is smaller it will not be stretched to fit the container
+but with scale down it does the same except that if the image is smaller it will not be stretched to fit the container.
+
+Margin collapsing:
+Margin collapsing occurs when two or more elements with margins touch each other, and the browser "collapses" the margins to create a single, larger margin. This can affect the layout and appearance of your page, especially when working with complex layouts and nested elements.
+
+an example to illustrate margin collapsing:
+<div style="margin: 10px; border: 1px solid black;">Element 1</div>
+<div style="margin: 20px; border: 1px solid black;">Element 2</div>
+
+So in Element 1 and Element 2 the horizontal margin will be 20px and the vertical margin will be 30px,
+that's because horizontal(left and right) margins collapse i.e. the gap's value will be of the largest value,
+but vertical(top and bottom) margins donot collapse i.e. the gap's value will be the value of both margins added together.
+
+To avoid margin collapsing or to control its behaviour: Padding is normally used because when they are added they donot collapse and if the margins collapse adding a padding value would help to add the value of the collapsed margin i.e. the margin with the smaller value.
+
+Linear-gradient:(to top, red 50%, green 30%, blue 20%); can have 2values i.e. the gradient direction or the gradient percentage and after that you can add as many colors as you want.
+and if you don't specify percentages after each color, the default behavior is that the colors will be evenly distributed along the gradient.
+e.g.
+When you use linear-gradient(45deg, grey, light-brown), you're creating a linear gradient that transitions from grey to light-brown, 
+and the angle value is 45deg, the angle value is measuered from the x-axis (ie.e bottom left to the y-axis i.e. top right).
+0° (or 360°) is at the bottom left
+90° is at the top left
+180° is at the top right
+270° is at the bottom right
