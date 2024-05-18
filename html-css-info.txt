@@ -103,6 +103,8 @@ text-transform: capitalize or lowercase or uppercase or inheret etc...
 
 left to right is the main axis and top to bottom is the cross axis.
 
+Flexbox 
+
 [The CSS Flexbox] display: flex; allows us to manage the space or the way elements are aligned and positioned inside the flex container,
 the container or the element in which the display: flex; is in is the parent container and the elements inside it are the children.
 flex-direction: row or column; row is the default direction of flexbox, flex-direction: row-reverse or column-reverse; (row-reverse reverses the position of the elements in the cross axis and column-reverse does the same but in the main axis).
@@ -111,7 +113,7 @@ flex-wrap: nowrap or wrap;  the default value of the flexbox is nowrap (is a pro
 
 flex-flow:row nowrap, is combination of both flex-direction and flex-wrap so its a shortcut.
 
-justify-content: ; and align-items: ; values (center or flex-start or flex-end or stretch or space-between or space-evenly etc...)
+justify-content: ; and align-items: ; values (center or start or end or stretch or space-between or space-evenly etc...)
 flex-start is the default value.
 align-content: ; is the same as align-items: ; but align-items is used when there is only one line of items but align-content is used when there are multiple lines of items.
 gap: ;
@@ -127,6 +129,7 @@ background-size: cover; to make the image's size just cover the entire page.
 Opacity is a CSS property that allows you to control the transparency or opacity of an element. It's a value that ranges from 0 (fully transparent) to 1 (fully opaque) the values are 0.1 0.2 etc...
 in the rgba() the a is opacity
 
+Position: ; property
 position: static; Position is a CSS property that allows you to control the placement of an element within its containing element or the browser window.
 the default position is static, but there are 5 values: 1.static, 2.relative, 3.absolute, 4.fixed, 5.sticky
 
@@ -203,3 +206,65 @@ and the angle value is 45deg, the angle value is measuered from the x-axis (ie.e
 90° is at the top left
 180° is at the top right
 270° is at the bottom right
+
+The overflow property is a CSS property that determines what happens to the content of an element when it exceeds its defined size. It's commonly used to control the behavior of elements that contain too much content, such as text, images, or other elements.
+
+Some of the values of the overflow property:
+visible: This is the default value. It means that the content will be displayed as usual, and any excess content will be visible outside the element.
+hidden: This value hides the excess content, so only the content that fits within the element's boundaries is visible.
+scroll: This value adds a scrollbar to the element, allowing users to scroll through the excess content.
+
+Here are some common use cases for the overflow property:
+** Preventing text wrapping**: Set overflow to hidden to prevent text from wrapping onto a new line.
+Creating a scrollbar: Set overflow to scroll to add a scrollbar to an element, allowing users to scroll through excess content.
+Hiding excess content: Set overflow to hidden to hide excess content that exceeds an element's boundaries.
+
+The CSS grid:
+notes!-  
+The CSS Grid is a two-dimensional layout system, meaning it can create a grid with both rows and columns. 
+This allows for more complex layouts with multiple axes of alignment.
+On the other hand, CSS Flexbox is a one-dimensional layout system, meaning it's designed for laying out elements in a single dimension, either horizontally or vertically. 
+While Flexbox can be used to create complex layouts, it's typically used for simpler layouts such as:
+
+- Laying out a series of items horizontally or vertically
+- Creating a navigation bar or footer
+- Designing a responsive layout with a single axis of alignment
+
+CSS Grid, on the other hand, is better suited for more complex layouts that require:
+- Multiple axes of alignment (both rows and columns)
+- Complex grid structures with multiple rows and columns
+- Precise control over grid cell sizes and spacing
+- Ability to create grid templates with repeating patterns
+display: grid;
+
+grid-template-columns: 2 or 1fr 3fr or 100px 300px; (example for some possible values for the property)
+so grid-template-columns is aproperty that can be used to define the number of columns as in the e.g. above (2columns),
+or it can be used to divide the coulumns in the page as in the e.g. above (the 1st column has 1fraction of the space whilst the second coulumn has 3fracts of the page),
+or it can be used to define coulumn widths as in the e.g. above the 1st coulumn has 100px and the 2nd has 300px.
+
+The grid-coulumn property: is a property that allows you to specify which grid columns an element should span. 
+e.g. grid-column: 3 or 3/4; etc...
+so In the first e.g. above the target is the 3rd coulumn and it only spans that coulumn.
+In the second e.g. above the the target is the 3rd coulumn and it spans up to the 4th coulumn.
+
+the difference between grid-column and grid-template-coulumns is:
+- grid-template-columns: is a property that defines the template of the grid, specifying the number of columns and their widths.
+- grid-column: is a property that specifies which grid columns an element should occupy.
+
+A pseudo class in css:
+li:first-of-type {
+  background-color: yellow;
+}
+The :first-of-type pseudo-class targets the first element of a specific type(in this case the list element) within its parent element.
+
+another one is the: 
+li:nth-of-type(3) {
+  background-color: yellow;
+}
+The li:n-of-type() pseudo-class targets the element's number specified in its columns, the element of a specific type(in this case the li: list items) within its parent element.
+
+The gap property: 
+Gap is a property that adds space between grid cells or grid rows.
+It creates a gap between the cells or rows within a grid container.
+Gap is measured from the inside of the grid cells or rows.
+Gap is only applicable when using the grid-template-columns or grid-template-rows properties to create a grid layout.
