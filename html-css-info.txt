@@ -268,3 +268,9 @@ Gap is a property that adds space between grid cells or grid rows.
 It creates a gap between the cells or rows within a grid container.
 Gap is measured from the inside of the grid cells or rows.
 Gap is only applicable when using the grid-template-columns or grid-template-rows properties to create a grid layout.
+
+The first value in the gap property is for the rows and the second is for the columns.
+
+The <meta charset="UTF-8" /> i.e. unicode UTF-8: its a link in the head.
+The UTF-8 (8-bit Unicode Transformation Format) metacharset is a character encoding scheme used to represent Unicode characters ranging from all the alphabet to numbers and other characters like arrows etc... .
+before addin the hex code of the UTF-8 charset or character set you should add &#x and thats because This is because the &#x notation is part of the HTML and XML standards for representing Unicode characters.

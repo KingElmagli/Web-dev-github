@@ -89,3 +89,7 @@ and that would copy everything in a new file but if you want everything to be co
 
 (fork) a "fork" refers to making a personal copy of a repository owned by someone else. When you fork a repository, you create a duplicate of the original repository in your own GitHub account.
 (pull request) After you fork the repository and add the changes you want then if you want the owner of the forked repository to add the changes you made you can send a pull request and if the owner approves of you changes he can merge your code to the main branch.
+
+(git reflog): git reflog is a Git command that displays a log of all the commits that have been made to your repository's references, including the commit history of your branches, tags, and the special ref HEAD.
+(git checkout "the commit hash"): e.g. (git checkout #4o4o44) the commit "hash" is normally a short hexadecimal string representing the commit, its a command that allows you to switch your local repository to a specific commit in the commit history.
+(git reset --hard) is a powerful command that can be used to reset your local branch to a specific commit. note! should use it after switching your commit.
