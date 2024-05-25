@@ -113,7 +113,8 @@ flex-wrap: nowrap or wrap;  the default value of the flexbox is nowrap (is a pro
 
 flex-flow:row nowrap, is combination of both flex-direction and flex-wrap so its a shortcut.
 
-justify-content: ; and align-items: ; values (center or start or end or stretch or space-between or space-evenly etc...)
+justify-content: ;  values (center or start or end or stretch or space-between or space-evenly etc...) along the main axis.
+align-items: ; values (center or start or end or stretch or space-between or space-evenly etc...) is used to specify how items within a flexbox or grid container should be aligned along the cross axis.
 flex-start is the default value.
 align-content: ; is the same as align-items: ; but align-items is used when there is only one line of items but align-content is used when there are multiple lines of items.
 gap: ;
@@ -209,17 +210,25 @@ and the angle value is 45deg, the angle value is measuered from the x-axis (ie.e
 
 The overflow property is a CSS property that determines what happens to the content of an element when it exceeds its defined size. It's commonly used to control the behavior of elements that contain too much content, such as text, images, or other elements.
 
-Some of the values of the overflow property:
+The values of the overflow property:
 visible: This is the default value. It means that the content will be displayed as usual, and any excess content will be visible outside the element.
 hidden: This value hides the excess content, so only the content that fits within the element's boundaries is visible.
 scroll: This value adds a scrollbar to the element, allowing users to scroll through the excess content.
+auto: This value is similar to scroll, but it only adds a scrollbar if the content overflows the container. If the content fits within the container, no scrollbar is added.
+inherit: This value inherits the overflow property from its parent element.
+overlay: This value is similar to hidden, but it also adds a visual indicator (such as a dashed line) to show that there is more content available.
 
 Here are some common use cases for the overflow property:
 ** Preventing text wrapping**: Set overflow to hidden to prevent text from wrapping onto a new line.
 Creating a scrollbar: Set overflow to scroll to add a scrollbar to an element, allowing users to scroll through excess content.
 Hiding excess content: Set overflow to hidden to hide excess content that exceeds an element's boundaries.
 
+The overflow property can also be applied to specific axes, such as:
+
+overflow-x: controls horizontal overflow
+overflow-y: controls vertical overflow
 The CSS grid:
+
 notes!-  
 The CSS Grid is a two-dimensional layout system, meaning it can create a grid with both rows and columns. 
 This allows for more complex layouts with multiple axes of alignment.
@@ -274,3 +283,16 @@ The first value in the gap property is for the rows and the second is for the co
 The <meta charset="UTF-8" /> i.e. unicode UTF-8: its a link in the head.
 The UTF-8 (8-bit Unicode Transformation Format) metacharset is a character encoding scheme used to represent Unicode characters ranging from all the alphabet to numbers and other characters like arrows etc... .
 before addin the hex code of the UTF-8 charset or character set you should add &#x and thats because This is because the &#x notation is part of the HTML and XML standards for representing Unicode characters.
+
+list-style: none; to remove all the styles from your lists.
+text-decoration: none; to remove all style form your texts specificly used for anchor tag.
+
+One of the bigger disadvantages of the px unit in css is that it is not scalable and it reduces the user focus, for e.g. when you define a fixed pixel values on an image or fonts users and viewers of your website wont be able to adjust the view to their need.
+
+                                                  Comparing Units: px, %percentage, em, rem
+
+px: The pixel unit is the most common unit used in CSS, and its used to define the size and position of elements on a web page.
+Percentage (%): The percentage unit is used to define the size and position of elements relative to their parent element. It is often used for layout purposes, such as setting the width of a container element, also its hard to manage due to its - Cascading nature.
+a cascading nature is When you use a percentage value in CSS, it can affect the styles of elements that are nested within it. This is because percentage values are calculated relative to the parent element, which means that the styles can cascade down to child elements.
+Em (em): The em unit is a relative unit that is based on the font size of the parent element. It is often used for typography purposes, such as setting font sizes or line heights.
+Root Em (rem): The rem unit is a relative unit that is based on the root element of the document, which is typically the <html> element. It is often used for typography purposes, such as setting font sizes or line heights.
