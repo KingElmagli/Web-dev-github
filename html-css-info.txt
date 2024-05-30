@@ -11,8 +11,9 @@
           >the MDN CSS property refrence.</a
         >
 </p>
- 
+
  Also use google fonts to add any fonts to your page.
+ And also use W3schools https://www.w3schools.com for refrences.
 
 note!= when linking a HTML file to multple CSS files and those CSS files have different values for the same element the later link would overwrite the links before it in the HTML head.
 
@@ -289,10 +290,39 @@ text-decoration: none; to remove all style form your texts specificly used for a
 
 One of the bigger disadvantages of the px unit in css is that it is not scalable and it reduces the user focus, for e.g. when you define a fixed pixel values on an image or fonts users and viewers of your website wont be able to adjust the view to their need.
 
-                                                  Comparing Units: px, %percentage, em, rem
+Comparing Units: px, %percentage, em, rem -
 
-px: The pixel unit is the most common unit used in CSS, and its used to define the size and position of elements on a web page.
+Pixel px: The pixel unit is the most common unit used in CSS, and its used to define the size and position of elements on a web page.
+
 Percentage (%): The percentage unit is used to define the size and position of elements relative to their parent element. It is often used for layout purposes, such as setting the width of a container element, also its hard to manage due to its - Cascading nature.
 a cascading nature is When you use a percentage value in CSS, it can affect the styles of elements that are nested within it. This is because percentage values are calculated relative to the parent element, which means that the styles can cascade down to child elements.
+
 Em (em): The em unit is a relative unit that is based on the font size of the parent element. It is often used for typography purposes, such as setting font sizes or line heights.
+1em is like 100%, 2em is like 200% 0.5em is 50% etc...
+
 Root Em (rem): The rem unit is a relative unit that is based on the root element of the document, which is typically the <html> element. It is often used for typography purposes, such as setting font sizes or line heights.
+
+differences between em, rem and %:
+note em and % are very similar when used in typography but not when used in other contexts, like padding margin etc...
+em: relative to its own element, em is based on the font size of its element in all contexts when used in padding, margin, font-size, width etc... and if the element has not font size it will be relative to the browser's default font size.
+rem: its the same as em but it's relative to the root element i.e. the <html></html> element
+percentage %: relative to its parent element in all contexts so when used in padding or margin or font-size etc... if the parent element for e.g. when used for padding and the parent element has no padding it will be browsers default padding, unlike em which will be relative to the browser's default font size if the elemnt no the parent has no font size.
+
+note! em is relative to font-sizes in its element and precentage % is relative to the same property of the parent element.
+note! if we assume the brower's default font size is 16px then 1.5rem if there is no font-size in the root element will be 24px.
+note! the root element is allways the html element.
+note! rem is always the prefered choice if applicable.
+
+Responsive Web Design- Media Queries:
+
+Media queries allows you to apply different styles based on specific conditions, such as the size and type of device, screen resolution, or even the orientation of the screen.
+e.g. @media(screen and (max-width: 800px))
+{
+  styles to be applied here
+}
+max-width defines the maximum width inwhich the CSS rules defined will be applied and if the screen size was above the max-width then the default browser styles will be applied, 
+min-width defines the minimum width inwhich the CSS rules defined will be applied and if the screen size was below the min-width then the default browser styles will be applied.
+
+common media queries breakpoints
+Portrait: smartphone 480px, tablet 768.
+Landscape: Notebook 1024px, Desktop computer 1200px, TV >1200px.
