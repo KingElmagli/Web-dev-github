@@ -15,8 +15,15 @@
  Also use google fonts to add any fonts to your page.
  And also use W3schools https://www.w3schools.com for refrences.
 
-note!= when linking a HTML file to multple CSS files and those CSS files have different values for the same element the later link would overwrite the links before it in the HTML head.
-
+note! when linking a HTML file to multple CSS files and those CSS files have different values for the same element the later link would overwrite the links before it in the HTML head.
+note! the specifity in css, i.e. if the element beign refered to is more specific then it's rules will be applied, for e.g. 
+<nav>  if we want to make the font of the <a> element white and then we style the <ul> element's font with white, then it will become white and all elements within the <ul> but if we then style the <li> element's font to black then the <li> style will overwride the <ul> one because its more specific and so on.
+  <ul> 
+    <li> 
+      <a></a> 
+    </li> 
+  </ul> 
+</nav>
  Inline elements are HTML elements that are displayed inline with the surrounding content, meaning they do not start on a new line and only take up as much width as necessary. 
  Some common inline elements include <span>, <a>, <strong>, <em>, and <img>.
 
@@ -326,3 +333,15 @@ min-width defines the minimum width inwhich the CSS rules defined will be applie
 common media queries breakpoints
 Portrait: smartphone 480px, tablet 768.
 Landscape: Notebook 1024px, Desktop computer 1200px, TV >1200px.
+
+The display: none; property removes the items displayed in the element its addded to.
+
+The <aside> element in HTML is used to define a section of the document that is related to the main content, but not part of the main content.
+It's a block level element and a semantic i.e. i.e. it provides meaning to to the element.
+
+It is often used to provide additional information, such as:
+Sidebars or navigation bars
+Related articles or links
+Definitions or explanations
+Pull quotes or other secondary content
+Footnotes or references
