@@ -1,3 +1,4 @@
+
 <p>
         Learn more about all available HTML elements on
         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
@@ -345,3 +346,53 @@ Related articles or links
 Definitions or explanations
 Pull quotes or other secondary content
 Footnotes or references
+
+The target pseudo-selector: The :target pseudo-class is specifically designed to target elements with an ID attribute that matches the URL fragment. Because ID attributes in HTML start with a # symbol, the :target pseudo-class can be used to target those elements.
+
+<a href="#my-anchor">Link to my-anchor</a> note! also this is an internal link because it links to an #id inside the same page, but for external links we need to have the href= "link to the specified page" and not just an id. 
+
+[z-index property]
+note! the z-axis is from back to front basically the depth of the object, the z-axis defines the position and orientation along the line of sight, which points from the back of the object to the front.
+The z-index property is a CSS property that determines the stacking order of elements. It's a way to control which elements are displayed on top of others, and which elements are hidden behind others.
+the z-index is commonly used in Overlap elements: When you want to overlap two elements on a page, you can use z-index to control which element is displayed on top of the other for example a drop-down menu you apply the hover pseudo-selector and use the z-index so that when the object is hovered the dropdown meny appears on top of the other objects, 
+or also by default in html elements are stacked on top of each other so if you want an element to appear on top of the other elements you can use the z-index: ; property.
+
+In most cases, you do need to apply a position property to an element in order to use the z-index property. This is because the z-index property only applies to elements that have a non-static position value.
+
+Here's a breakdown of the different position values and how they affect the z-index property:
+
+static: The default position value. Elements with a static position value do not have a z-index value.
+relative: The z-index property applies to elements with a relative position value. This means that the element will be positioned relative to its normal position in the document flow, and the z-index property will determine its stacking order.
+absolute: The z-index property applies to elements with an absolute position value. This means that the element will be positioned relative to its nearest positioned ancestor, and the z-index property will determine its stacking order.
+fixed: The z-index property applies to elements with a fixed position value. This means that the element will be positioned relative to the viewport, and the z-index property will determine its stacking order.
+So, if you want to use the z-index property, you'll need to apply a non-static position value (such as relative, absolute, or fixed) to the element.
+
+However, there are some exceptions:
+Flexbox: In flexbox layouts, elements can have a z-index value without applying a position property. This is because flexbox containers automatically apply a stacking context to their children.
+Grid: Similarly, in grid layouts, elements can have a z-index value without applying a position property. This is because grid containers automatically apply a stacking context to their children.
+
+In summary, while it's not strictly necessary to apply a position property to an element to use the z-index property, it's usually required unless you're using a flexbox or grid layout.
+
+the z-index values -
+1. Auto: which is 0(default) i.e. The browser will determine the stacking order of elements.
+2. Integer value (e.g., 1, 2, 3, etc.): This value specifies the stacking order of an element relative to its parent and siblings. Higher values are displayed on top of lower values, also you can use negative values.
+Example:
+.element1 {
+  position: relative;
+  z-index: 2;
+}
+In this example, .element1 will be displayed on top of other elements with a lower z-index value(and the default z-index value is 0).
+
+COLORS:
+The grey color is always required and it helps achive a more professional look for our websites.
+Some popular shades of grey that are commonly used in website design include:
+
+#F7F7F7 (a light, neutral grey)
+#E5E5E5 (a medium, balanced grey)
+#333333 (a dark, rich grey)
+#808080 (a dark, cool grey)
+
+The primary color of a website is the color that is most prominent and used as the background or main visual element. It's often the color that is most associated with the brand's identity and is used to create a consistent visual aesthetic across the website.
+The accent color is a secondary color that is used to add visual interest, emphasis, and contrast to your website's design. It's typically used to draw attention to specific elements, such as:
+CTAs (Call-to-Actions): Buttons, links, or other interactive elements that encourage users to take action.
+Icons: Small graphics or icons that represent actions, concepts, or emotions.
