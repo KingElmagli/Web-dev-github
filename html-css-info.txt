@@ -396,3 +396,95 @@ The primary color of a website is the color that is most prominent and used as t
 The accent color is a secondary color that is used to add visual interest, emphasis, and contrast to your website's design. It's typically used to draw attention to specific elements, such as:
 CTAs (Call-to-Actions): Buttons, links, or other interactive elements that encourage users to take action.
 Icons: Small graphics or icons that represent actions, concepts, or emotions.
+
+CSS VARIABLES:
+CSS variables, also known as CSS custom properties, are a way to store and reuse values in your CSS code. They allow you to define a variable once and then use it throughout your code, making it easier to maintain and update your styles.
+context html{--fontttt: "times-new-roman", serif;} then you can use it in the css properties for e.g. font-family: var(fontttt);
+note! there should be two hyphens before the name, and to use in other css properties you use var(fontttt); e.g. font-family: var(fontttt);
+
+Selectors:
+1 html{}: is the root element of the html therefore all elements will inherit the rules applied to it and thats why most of the time we add the css custom properties in the html.
+2 :root{}:(a pseudo-selector) it's a pseudo class and it's used to target the root element like html element and unlike other pseudo classes it's not added to specfic selector rather it's used as a standalone selector.
+3 *{}: The * selector, also known as the universal selector, is a special selector that matches any element, regardless of its type or class. It's like a wild card that selects all elements in the document.
+
+CSS TRANSFORM AND TRANSTION properties:
+
+The transform: ; property
+The transform property is a CSS property that allows you to modify the visual representation of an element by applying transformations.
+The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.
+
+Here are some example values for the transform property:
+
+1. Rotation
+
+rotate(30deg): Rotates the element 30 degrees clockwise.
+rotate(-30deg): Rotates the element 30 degrees counterclockwise.
+rotate(45deg) or rotate(-45deg): Rotates the element 45 degrees.
+
+2. Scaling
+
+scale(2): Scales the element up to 2 times its original size.
+scale(0.5): Scales the element down to 0.5 times its original size.
+scale(1.5, 0.5): Scales the element up to 1.5 times its original width and down to 0.5 times its original height.
+
+3. Skewing
+
+skewX(30deg): Skews the element 30 degrees in the X-axis.
+skewY(30deg): Skews the element 30 degrees in the Y-axis.
+skewX(30deg) skewY(20deg): Skews the element 30 degrees in the X-axis and 20 degrees in the Y-axis.
+
+4. Translation
+
+translateX(50px): Moves the element 50 pixels to the right.
+translateY(50px): Moves the element 50 pixels down.
+translateX(-50px) translateY(50px): Moves the element 50 pixels to the left and 50 pixels down.
+
+5. Combination
+
+rotate(30deg) scale(2): Rotates the element 30 degrees and scales it up to 2 times its original size.
+skewX(30deg) translateX(50px): Skews the element 30 degrees in the X-axis and moves it 50 pixels to the right.
+
+
+The transition: ; property 
+
+Transitions enable you to define the transition between two states of an element. Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript.
+The transition CSS property is a shorthand property for transition-property, transition-duration, transition-timing-function, transition-delay, and transition-behavior.
+This property can be used to create animations, smooth transitions, and other effects.
+
+The full syntax of the transition property:
+transition: <transition-property> || <transition-duration> || <transition-timing-function> || <transition-delay> || <transition-behavior>;
+
+The transition property has 5 properties and each has many values e.g. transition: the property you want the transition to apply to e.g. transition-property:background-color;, the duration you want this transition to take e.g. transition-duration:1s;, the transition timing function sets how values are calculated for CSS properties being affected by a transition effect e.g. transition-timing-function: ease-in; or ease-out, the delay property specifies the duration to wait before starting a property's transition effect when its value changes e.g. transition-delay: 1s;, the transition behaviour property allows you to control how multiple transitions are executed when they target the same CSS property, it helps you Specify the order in which transitions are executed When multiple transitions are applied to the same property, this property determines the order in which they are executed e.g. inherit or discrete or normal 
+e.g. transition-property: background-color, color, opacity; transition-behavior: inherit
+
+note! that the transition-behavior property is only used when multiple properties are applied to the same CSS transition property. If you have only one transition applied to a property, you don't need to use this property i.e. the transition-property.
+
+The transition-behavior property has three values:
+normal: This is the default value, which means that transitions are executed in the order they are declared.
+inherit: This value means that the transition-behavior property is inherited from the parent element. This can be useful when you want to apply the same transition behavior to multiple elements.
+discrete: This value means that transitions are executed in a discrete manner, meaning that each transition starts from the end of the previous one. This can be useful when you want to create a more complex animation effect.
+
+All of those transition properties can be applied in one property which is the transition: background-color 1s ease-out 1s discrete;
+
+other useful examples
+e.g. the property
+transition-property: margin-right; first write the property that you want this transition to apply to.
+transition-property: margin-right, color;
+transition: all: Applies the transition effect to all properties that are changed by the CSS rule.
+transition: height, width: Applies the transition effect only to the height and width properties.
+transition: background-color, color: Applies the transition effect only to the background-color and color properties.
+
+---------------------------------------------------------------------------------------------------------------------------------
+The SVG's (Scalable Vector Graphics):
+The SVG's are basically a text based description of scalable images that can be rendered by our browser.
+SVGs are often used to create icons and logos for websites, apps, and other digital media.
+A common free website to use which has many predefined SVG icons is hericons(https://heroicons.com/)
+demonstration: to use it go to the website and copy the SVG you want to use and add it to the body element for e.g. 
+
+<div class="hat-icon">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+</svg>
+</div>
+
+
