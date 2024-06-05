@@ -487,4 +487,34 @@ demonstration: to use it go to the website and copy the SVG you want to use and 
 </svg>
 </div>
 
+WEBFORMS:
+There are special HTML elements for getting and handling user input.
 
+Key Form elements-
+The most important HTML element we will use to fetch user input is <input> which is a void element and the type attribute <input type="">,
+another important element is the <textarea> element which is an element which will allow us to fetch multiline text input,
+another important element is the <select> element which can be used to build dropdown multiple-choice or multi-select input,
+another important element is the <button></button> An element button used to reset or submit the form,
+and the <form></form> element wraps the user input elements inside it for e.g.
+<form>
+ <input type="text">
+ <button>Submit</button>
+</form>
+and its used to send the input data to the specified place or perform some other action, there are also two important attributes used with the form Element,
+the action and the method attributes <form action="domain/the pathi.e. file name" method=""></form>, 
+1. the action attribute allows you to define the url i.e. the path that the request should be sent to,
+2. the method attribute in the <form> element specifies the HTTP request method used to send the form data to the server. 
+
+The method attribute in the <form> element can only have two valid values: POST and GET.
+Any other value specified for the method attribute is considered invalid
+
+<form  action="" method="GET"> <input type="text"> <button> Submit </button> </form>
+GET: This is the default method attribute if the method attribute is not specified. 
+the GET request is used whenever some resource should be fetched, it's used to get an HTML file and display its content so by default if you enter a URL a browser sents a get request to get the URL and display it's content, like amazon.com etc...
+
+<form  action="" method="POST"> <input type="text"> <button> Submit </button> </form>
+POST: typically forms are submitted to then store some user data in a database on the backend not to get a new page with different data therefore if we use the POST we tell the browser to send the POST request to the server which then indicates that the server should store the data.
+
+note! no matter if you want to use a POST or GET request you want to make sure that any data that was entered in the form like in the input element is passed along with the request and to do that you need to add a special attribute to your input elements in the form and that is the name="" attribute.
+
+The name="" attribute: allows you to add a unique identifier to the <input type="text" name=""> element just like the id="" attribute but id="" doesn't work for form submission.
