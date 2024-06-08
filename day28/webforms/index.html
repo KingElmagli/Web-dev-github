@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Demo Form</h1>
+      </header>
+      <form action="/" method="GET">
+        <section>
+          <h2>Your personal details</h2>
+          <ul>
+            <li>
+              <label for="username" placeholder="Mustaf Osman">Your name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="email" name="user-email" id="useremail" />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input
+                type="password"
+                id="userpassword"
+                name="user-password"
+                required
+                minlength="7"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>More details</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input
+                type="number"
+                step="1"
+                id="userage"
+                name="user-age"
+                required
+                min="18"
+                max="100"
+              />
+            </li>
+            <li>
+              <label for="birthdate">Your birthdate</label>
+              <input type="date" id="birthdate" name="birth-date" />
+            </li>
+            <li>
+              <label for="">Your favourite color</label>
+              <select name="favourite-color" id="favourite-color">
+                <!--the values are the ones sent to the server and content is what is displayed for the user-->
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="Red">Red</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <label for="usermessage">Your message</label>
+          <textarea id="usermessage" name="user-message"></textarea>
+        </section>
+
+        <section>
+          <h2>How should we verify your account</h2>
+          <ul>
+            <li class="form-control">
+              <label for="verify-text-sms">Via a text text message (SMS)</label>
+              <input
+                type="radio"
+                name="verify"
+                id="verify-text-sms"
+                value="text-message"
+              />
+            </li>
+            <li class="form-control">
+              <label for="verify-phone">Via a phone call</label>
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+              />
+            </li>
+            <li class="form-control">
+              <label for="verify-email">Contact me via email</label>
+              <input
+                type="checkbox"
+                name="contact"
+                id="verify-email"
+                value="email"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div class="form-control">
+            <label for="contact-phone">Contact me via phone</label>
+            <input type="checkbox" id="contact-phone" name="contact" />
+          </div>
+        </section>
+        <hr />
+        <div class="form-control">
+          <label for="verify-email">Agree to terms?</label>
+          <input type="checkbox" name="terms" id="agree-terms" />
+        </div>
+        <section>
+          <button type="reset" id="clear">Clear</button>
+          <button type="submit" id="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
