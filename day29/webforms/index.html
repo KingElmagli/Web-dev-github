@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Contact us</h1>
+      </header>
+      <form action="/" method="GET">
+        <section>
+          <h2>Your personal details</h2>
+          <ul>
+            <li>
+              <label for="username" placeholder="Mustaf Osman">Your name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="useremail">Your email address</label>
+              <input type="email" name="user-email" id="useremail" />
+            </li>
+            <li>
+              <label for="userpassword">Your password</label>
+              <input
+                type="password"
+                id="userpassword"
+                name="user-password"
+                required
+                minlength="7"
+              />
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>More details</h2>
+          <ul>
+            <li>
+              <label for="userage">Your age</label>
+              <input
+                type="number"
+                step="1"
+                id="userage"
+                name="user-age"
+                required
+                min="18"
+                max="100"
+              />
+            </li>
+            <li>
+              <label for="birthdate">Your birthdate</label>
+              <input type="date" id="birthdate" name="birth-date" />
+            </li>
+
+            <label for="usermessage">Your message</label>
+            <textarea id="usermessage" name="user-message"></textarea>
+
+            <li>
+              <label for="">How did you find us?</label>
+              <select name="favourite-color" id="favourite-color">
+                <!--the values are the ones sent to the server and content is what is displayed for the user-->
+                <option value="websearch">Web search</option>
+                <option value="word-of-mouth">Word-of-mouth</option>
+                <option value="other">Other</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="form-control">
+              <label for="phone-call">Call me</label>
+              <input
+                type="radio"
+                name="verify"
+                id="phone-call"
+                value="text-message"
+              />
+            </li>
+            <!-- <li class="form-control">
+              <label for="verify-phone">Via a phone call</label>
+              <input
+                type="radio"
+                name="verify"
+                id="verify-phone"
+                value="phone"
+              /> -->
+            </li>
+            <li class="form-control">
+              <label for="verify-email">Send me email</label>
+              <input
+                type="radio"
+                name="contact"
+                id="verify-email"
+                value="email"
+              />
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div class="form-control">
+            <label for="dont-reply">Don't reply</label>
+            <input type="radio" id="dont-reply" name="contact" />
+          </div>
+        </section>
+        <hr />
+        <div class="form-control">
+          <label for="verify-email">Agree to terms?</label>
+          <input type="checkbox" name="terms" id="agree-terms" />
+        </div>
+        <section id="form-actions">
+          <button type="reset" id="clear">Clear</button>
+          <button type="submit" id="submit">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>

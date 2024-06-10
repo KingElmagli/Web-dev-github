@@ -1,0 +1,2 @@
+JavaScript is mainly used to add interactivity to websites.
+Variables are labelled or named data containers.
