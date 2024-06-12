@@ -1,0 +1,57 @@
+JavaScript is mainly used to add interactivity to websites.
+
+Learn more about JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+
+The <script></script> html element is used to add internal javascript to the html page.
+
+console.log("hello world"):  is used to output information to the console.
+
+Values: Strings, numbers, booleans, objects, arrays....
+Variables: are labelled or named data containers. var and let are used to declare a variable.
+
+alert(""); is a javascript command which is used to display the between brackets content and you should press ok to remove the popup.
+note! you need quotes around strings but you don't need quotes for numbers.
+
+<script>
+    alert('Hi, I\'m Mustafa!'); so the reason there is a backward slash after the I to inform javascript that this is not the closing tag but rather a normal text.
+
+</script>
+
+To link the javascript page to the html page we use the script unlike the css we don't use the link tag e.g. 
+<head>
+  <script src="app.js"></script>
+</head>
+note! if you want to write code inside the script tag don't use the src="" attribute i.e. don't link to an external javascript page.
+
+Arrays: are used to store a collection of elements from any data type and they are created using the square brackets, i.e. using the same syntax of the variable but adding square brackets after the = sign e.g.
+let numbers = [1, 2, 3, 4, 5];
+let fruits = ['apple', 'banana', 'orange'];
+
+
+Array elements are accessed using zero-based indexing. For example, to access the first element of an array:
+console.log(numbers[0]); // Output: 1
+
+Array elements can be modified or reassigned by specifying the index of the element:
+CopyReplit
+fruits[1] = 'pineapple';
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+Elements can be added to the end of an array using the push() method and removed from the end using the pop() method.
+
+fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange', 'mango']
+
+fruits.pop();
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+note! in the arrays put every single value in a different quote lest you want them to be displayed as one value.
+
+Objects: are used to store collections of key-value pairs, where each key is a unique property name and each value can be any data type, such as numbers, strings, booleans, arrays, functions, or even other objects.
+to declare an object just like the arrays but instead of [] we use the {}. 
+e.g.
+let person = {
+  name: 'Alice',
+  age: 30,
+  isStudent: true,
+  hobbies: ['reading', 'painting'],
+};
