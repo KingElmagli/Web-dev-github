@@ -1,0 +1,89 @@
+JavaScript is mainly used to add interactivity to websites.
+
+Learn more about JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+
+The <script></script> html element is used to add internal javascript to the html page.
+
+console.log("hello world"):  is used to output information to the console.
+
+Values: Strings, numbers, booleans, objects, arrays....
+Variables: are labelled or named data containers. var and let are used to declare a variable.
+
+alert(""); is a javascript command which is used to display the between brackets content and you should press ok to remove the popup.
+note! you need quotes around strings but you don't need quotes for numbers.
+
+<script>
+    alert('Hi, I\'m Mustafa!'); so the reason there is a backward slash after the I to inform javascript that this is not the closing tag but rather a normal text.
+
+</script>
+
+To link the javascript page to the html page we use the script unlike the css we don't use the link tag e.g. 
+<head>
+  <script src="app.js"></script>
+</head>
+note! if you want to write code inside the script tag don't use the src="" attribute i.e. don't link to an external javascript page.
+
+note!the backticks `` allow you to add whitespace and formatting to the string, making it easier to read and understand.
+
+Arrays: are used to store a collection of elements from any data type and they are created using the square brackets, i.e. using the same syntax of the variable but adding square brackets after the = sign e.g.
+let numbers = [1, 2, 3, 4, 5];
+let fruits = ['apple', 'banana', 'orange'];
+
+
+Array elements are accessed using zero-based indexing. For example, to access the first element of an array:
+console.log(numbers[0]); // Output: 1
+
+Array elements can be modified or reassigned by specifying the index of the element:
+CopyReplit
+fruits[1] = 'pineapple';
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+Elements can be added to the end of an array using the push() method and removed from the end using the pop() method.
+
+fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange', 'mango']
+
+fruits.pop();
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+note! in the arrays put every single value in a different quote lest you want them to be displayed as one value.
+
+Objects: are used to store collections of key-value pairs, where each key is a unique property name and each value can be any data type, such as numbers, strings, booleans, arrays, functions, or even other objects.
+to declare an object just like the arrays but instead of [] we use the {}. 
+e.g.
+let person = {
+  name: 'Alice',
+  age: 30,
+  isStudent: true, /*a variable*/
+  hobbies: ['reading', 'painting'],
+};
+note! for the object to specify one of its children you can use the . e.g. console.log(person.age)
+
+note! you only need to add the var or let keywords when you first assign a variable but if you want to change the value of an existing variable you only need to type its name you should not use the var or let keyword.
+
+FUNCTIONS:
+A function is a block of code that can be executed multiple times from different parts of your program.
+The syntax is as follows-
+
+function greet(name) {
+  alert("Hello " + name);
+}
+greet("Mustafa Osman"); 
+note! in between the brackets we're declaring a parameter basically it's like a new variable which doesn't not have a global scope.
+1. Declare the function using the function keyword, followed by the name of the function.
+2. Specify the parameter list within the () brackets (if needed), in this case the parameter is the name variable.
+3. Write the code that will be executed when the function is called within the {} brackets.
+4. Call the function by using its name and passing any required arguments.
+
+note! In the context of a function, a parameter list refers to the list of variables that are passed to the function when it's called. 
+
+The RETURN STATEMENT:
+The return statement is used to exit the function and send a value back to the caller.
+an example:
+function calcAge(userAage) {
+  return userAge - 18;
+}
+let finalAge = calcAge(30);
+alert(finalAge); // Output: 12
+
+note! if you have multiple parameters you can seperate with commas.
