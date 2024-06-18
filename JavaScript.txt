@@ -1,0 +1,184 @@
+JavaScript is mainly used to add interactivity to websites.
+
+Learn more about JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+
+The <script></script> html element is used to add internal javascript to the html page.
+
+console.log("hello world"):  is used to output information to the console, it's basically a method.
+
+note! the semicolon in javascript is optional but the convention for the best practice is to use it.
+
+Values: Strings, numbers, booleans, objects, arrays....
+Variables: are labelled or named data containers. var and let are used to declare a variable.
+
+alert(""); is a javascript command which is used to display the between brackets content and you should press ok to remove the popup.
+note! you need quotes around strings but you don't need quotes for numbers.
+
+<script>
+    alert('Hi, I\'m Mustafa!'); so the reason there is a backward slash after the I to inform javascript that this is not the closing tag but rather a normal text.
+
+</script>
+
+To link the javascript page to the html page we use the script unlike the css we don't use the link tag e.g. 
+<head>
+  <script src="app.js"></script>
+</head>
+note! if you want to write code inside the script tag don't use the src="" attribute i.e. don't link to an external javascript page.
+
+note!the backticks `` allow you to add whitespace and formatting to the string, making it easier to read and understand.
+
+Arrays: are used to store a collection of elements from any data type and they are created using the square brackets, i.e. using the same syntax of the variable but adding square brackets after the = sign e.g.
+let numbers = [1, 2, 3, 4, 5];
+let fruits = ['apple', 'banana', 'orange'];
+
+variable names cannot start with a number in JavaScript.
+
+Array elements are accessed using zero-based indexing. For example, to access the first element of an array:
+console.log(numbers[0]); // Output: 1
+
+Array elements can be modified or reassigned by specifying the index of the element:
+
+fruits[1] = 'pineapple';
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+Elements can be added to the end of an array using the push() method and removed from the end using the pop() method.
+
+fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange', 'mango']
+
+fruits.pop();
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+note! in the arrays put every single value in a different quote lest you want them to be displayed as one value.
+
+Objects: are used to store collections of key-value pairs, where each key is a unique property name and each value can be any data type, such as numbers, strings, booleans, arrays, functions, or even other objects.
+to declare an object just like the arrays but instead of [] we use the {}. 
+e.g.
+let person = {
+  name: 'Alice',
+  age: 30,
+  isStudent: true, /*a variable*/
+  hobbies: ['reading', 'painting'],
+};
+note! for the object to specify one of its properties you can use the dot notation . e.g. alert(person.age)
+
+note! you only need to add the var or let keywords when you first assign a variable but if you want to change the value of an existing variable you only need to type its name you should not use the var or let keyword.
+
+FUNCTIONS:
+A function is a block of code that can be executed multiple times from different parts of your program.
+The syntax is as follows-
+
+function greet(name) {
+  alert("Hello " + name);
+}
+greet("Mustafa Osman"); 
+note! in between the brackets we're declaring a parameter basically it's like a new variable which doesn't not have a global scope.
+1. Declare the function using the function keyword, followed by the name of the function.
+2. Specify the parameter list within the () brackets (if needed), in this case the parameter is the name variable.
+3. Write the code that will be executed when the function is called within the {} brackets.
+4. Call the function by using its name and passing any required arguments.
+
+note! In the context of a function, a parameter list refers to the list of variables that are passed to the function when it's called. 
+
+The RETURN STATEMENT:
+The return statement is used to exit the function and send a value back to the caller.
+an example:
+function calcAge(userAage) {
+  return userAge - 18;
+}
+let finalAge = calcAge(30);
+alert(finalAge); // Output: 12
+
+note! if you have multiple parameters you can seperate with commas.
+note! A function is basically a custom command.
+
+Another interesting excercise:
+//no:1 Create three new variables
+// let courseName = "100 Days of code";
+// let price = 59;
+// let goals = ["learn programing", "gain extra knowledge", "become independent"];
+
+//no:2 Output ("alert") the three variable values
+// alert(courseName);
+// alert(price);
+// alert(goals);
+
+//no:3 Try "grouping" the three variables together and still output their values thereafter
+let group = {
+  courseName: "100 Days of code",
+  coursePrice: 59,
+  mainGoals: ["learn programing", "gain extra knowledge", "have fun"],
+};
+
+alert(group.courseName);
+alert(group.coursePrice);
+alert(group.mainGoals);
+
+//no:4 Also output the second element in your "main goals" variable
+alert(group.mainGoals[1]);
+
+//no:5 Add a custom command that does the following:
+//    - Use your "main goals" variable and access an element by its identifier
+//    - The concrete identifier value should be dynamic / flexible
+//      (i.e. the command can be executed for different identifier)
+//    - The "main goals" variable should also be dynamic: The command should work
+//      with ANY list of values
+//    - The custom command should provide the accessed value (i.e. the list element)
+
+function getListItem(array, arrayIndex) 
+{
+  let arrayElement = array[arrayIndex];
+  return arrayElement;
+}
+//no:6 Execute your custom command from (5) and output ("alert") the result
+let firstGoal = getListItem(group.mainGoals, 0);
+alert(firstGoal);
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+METHODS:
+Methods are basically functions inside an object with the same syntax just without using the function keyword.
+Just like a variable in an object is called a property, a function in an object is called a method.
+
+e.g. 
+let person = {
+  name: "Max", //Property
+  greet() { //Method (a function inside an object but without the function keyword)
+    alert("Hello");
+  }
+}
+note! to execute a method, just like when you execute a variable i.e. a property in an object by using the dot notation you do the same for the method.
+person.greet();
+
+note! in vscode methods have purple square boxes and properties have blue rectangular boxes.
+console.log("hello world"):  is used to output information to the console, it's basically a method thats why when we execute it we add parenthesis.
+note! after using the console.log() method you can check the results in the developer tools in the console.
+
+Math Operations:
+note! numbers without decimal places are called integers and numbers with decimal places are called floats.
+console.log(10 + 4);
+console.log(10 - 4);
+console.log(10 * 4);
+console.log(10 / 4);
+console.log(11 % 4); //the modulus operator gives the remainder of the division so 11 divded 4 the answer would be a float which means it doesn't fit therefore the modulous operator checks how many times does 4 fit into 11 and gives the remainder which in this case is 3.
+console.log((10+3-5)*10);
+
+let result = (10+3-5*10)*10;
+result = 10 * 4;
+result = result +1;
+result++; this variable is the same as result = result +1;. i.e. it adds one to the variable.
+result--; and this subtracts one. 
+
+sometimes you don't want to just add one or subtract one;
+result+=5; the shortened version of result = result +5; if you want to add += or subtract -= or divide /= or multiply *= more than one.
+
+You can even use + plus + operator to concatenate two strings like for example console.log("Mustafa "+"Osman"); but you can't use the minus or the * or the divide etc... operators and if you did you would get a NaN(Not a number)( A special value that exists in JavaScript for cases like this.)
+
+you can also use the shorthand result = 4**3; for the result = 4*4*4;
+
+let userName = "Mustafa";
+console.log(userName.length); So using the .length dot notation gives you the length of the characters and in this case it will print it to the console.
+
+note! a string is not an object but we can still in javascript use the dot notation to access various methods and properties which is mainly used in(the dot notation) objects to access their properties an e.g. is userName.length.
+
+JavaScript dot notation methods:
+the first e.g. was the .length, but there are more e.g. .toUpperCase or .toLowerCase etc...
