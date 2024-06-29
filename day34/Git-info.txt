@@ -1,0 +1,106 @@
+command prompt commands
+
+
+Dir is a directory, cd is change directory  after cd you write the name of the directory, (cd ..) will move one directory backward,
+(mkdir directory-name) is make directory, open a dir using cd dirName and then \ then the other directory \,
+to start an aplication use (start the appName), the (type) command alongside then the name of the file opens the file in the terminal,
+(del) is delete you can delete both fils and directories.
+(use tab for auto complete), (use colon + x to go back to command prompt from git)
+
+In Git, a repository is a collection of files, directories, and version control data stored in a specific location (either locally or remotely) to manage project history and collaboration.
+A directory is a folder that contains files and other folders.
+
+Repository (Repo): A repository is the central location where all the files and data for a project are stored. A repository can contain multiple directories, branches, and tags.
+Directory: A directory is a container for organizing files and subdirectories within a repository. It's a way to structure your project's file system hierarchy. Directories can contain files, subdirectories, or both.
+ git commands
+Branch: A branch is created to feature to work on it independently without affecting the main codebase.A branch is a parallel development path within a repository, as I mentioned earlier. It's a way to isolate changes or features while still maintaining a connection to the main project.
+e.g. of uses:
+Feature development: Create a new branch for a new feature to work on it independently without affecting the main codebase.
+Bug fixing: Create a new branch to fix a critical bug or issue without affecting the main codebase.
+Experimentation: Create a new branch to test and experiment with new ideas or approaches without affecting the main codebase.
+ 
+(git init) i.e. initialise is a command used in Git to initialize a new, empty Git repository in a specified directory, git init is typically used when you are starting a new project or when you want to convert an existing project into a Git repository. After running git init, you can start adding files to your repository, commit changes, and track the history of your project using Git.
+ basically you can not use git commands before using (git init).
+
+(git remote add origin) https://github.com/your-username/your-repo-name.git  to link your local repository to your GitHub account replace username with your username and repo-name with your repository's name.
+
+ This is a git commit! (a commit is a code snapshot)
+ We have a working directory i.e. the text file and a repository which is the tracking part git does.
+ Branch is where commits are stored, the master branch is the core place where the changes are saved
+
+ To run a git command in the terminal you should start with "git", 
+ To initialise a repository use (git init), to see your info about your current git project use (git status)
+
+ git add, adds the changes to the commit, and git commit creates the commit and adds it to the branch. 
+ another summary is  git add adds changes to the staging area, and git commit creates the commit and adds it to the branch.
+
+ (git add .) to add  everything, (git add file_name) to add a specific file.
+ (git commit -m "Your commit message here")
+
+ (git log)  It shows a history of all the commits that have been made in the repository, including information such as the commit hash, author, date, and commit message.
+
+(git config) is used for managing Git configuration settings i.e. set, get or delete. 
+For example, you can use (git config user.name "Your Name") to set your username in Git.
+
+(git config --global) sets global configuration values that apply across all repositories.
+For example git config --global user.email "john.doe@example.com"
+This command sets the user email to "john.doe@example.com" globally for all repositories on your machine.
+
+(git config --global --edit)
+This command i.e. (git config --global --edit) allows you to edit the global configiration settings you set using the git config --global such as user name, email address, etc.
+
+(git branch -m (the new name) ) use this command to change the git branch name.
+
+(git checkout "branch name") to swith to a branch name type git then the branch name."
+
+ if you  use (git checkout -b) to create a new branch with the same name as a previously deleted branch, the new branch will be created from the same point where the old branch was deleted. 
+
+(git merge (branch name)) to integrate changes from one branch into another.
+
+(git show (branch name)) to show the status of the branch specified.
+
+To delete a branch you have to checkout another branch than the one you want to delete, and merge it with another branch. 
+(git branch -D) command is used to delete a specified branch in Git. Here's how you can use it:
+
+(git rm file-name) to remove the file you specify.
+
+(git reset --hard HEAD~1)resets the current branch to the commit before the current HEAD. This means that it will remove any changes made after that commit 
+and move the HEAD pointer to the previous commit, this action is irreversible so be cautious when using this command.
+(git reset --hard HEAD~2 or 3 or 4)you could even jum back 2,3,4 or 5 commits and so on.
+this is how you jump back to later commits whilist in the same time deleting the later commits you've had.
+
+GitHub
+Git repositories are called local repositories.
+GitHub repositories are called remote repositories.
+
+A public repository means everyone on the internet can see this repository and you can choose who can commit.
+A private repository you can choose who can see and commit to this repository.
+
+(git remote add origin)basically tells git to add a connection to a remote repository (i.e. in gitHub) and following the git command you should paste the URL.
+When you run git remote add origin <URL>, you're telling Git to add a new remote repository named "origin" with the specified URL.
+
+You can use any name you like, but if you don't specify a name, Git will automatically assign the name "origin" to the new remote.
+It's a convention to use the name origin in Git and thats because the origin remote is usually the repository that your local repository was cloned from or pushed to.
+
+(git branch theName) to create a new branch.
+
+(git push -u then "the specified name in the git remote command in this case origin" then "the branch name")the -u is for setting upstreams"
+so git push origin main is our command.
+
+(git pull) does the opposite of git push, so it fetches changes from the remote repository to the local repository.
+
+For windows use this command if you want to change or delete (your personal access token) which is a key which gives us access to our gitHub account via git.
+(git credential reject => ENTER
+host=github.com => ENTER
+protocol=https => ENTER)
+you create a personal access token (note! anyone who has this token can access your repositories) by going to the settings then developer settings then personal access token.
+
+(git clone URL (URL of the code from the remote repository i.e. github)) to clone a remote repository into a local repository and that is used in general to clone your repository in another computer and use git i.e. local repository on that computer.
+and that would copy everything in a new file but if you want everything to be copied to the same file you have ( type a (.) after the command) 
+
+(fork) a "fork" refers to making a personal copy of a repository owned by someone else. When you fork a repository, you create a duplicate of the original repository in your own GitHub account.
+(pull request) After you fork the repository and add the changes you want then if you want the owner of the forked repository to add the changes you made you can send a pull request and if the owner approves of you changes he can merge your code to the main branch.
+
+(git reflog): git reflog is a Git command that displays a log of all the commits that have been made to your repository's references, including the commit history of your branches, tags, and the special ref HEAD.
+(git checkout "the commit hash"): e.g. (git checkout #4o4o44) the commit "hash" is normally a short hexadecimal string representing the commit, its a command that allows you to switch your local repository to a specific commit in the commit history.
+(git reset --hard) is a powerful command that can be used to reset your local branch to a specific commit. note! should use it after switching your commit.
