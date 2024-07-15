@@ -806,10 +806,13 @@ console.log("Done!"); //this code will not be executed until the condition is do
 
 The confirm("are you ok"); function is similiar to alert but it only allows us to answer with yes or no
 
-note! when you create a const inside a function(//we know that constants can only be used once) it is exclusive to that function i.e. you can use the same name of the const outside the function because it's like a different dimension(the function);
+note! when you create a const inside a function(//constants can only be used once) it is exclusive to that function i.e. you can use the same name of the const outside the function because it's like a different dimension(the function);
 
 The Math.random object: note! random is a method inside the Math object
 it's a globally available math object which is built into the browser which has a .random method, by default it gives you a random number between 0 and 1 i.e. a floating point,
 but we dont't want a random number between 0 and 1, so we will multiply math.random() by the number specified in my case it's math.random()*6; so now it will give use a random number between 0 and 6 because 0*6 is 0 and 1*6 is 6; but the unfortunate is that we would still get floating point numbers therefore,
 we would use another useful built-in method of the same Math. object which is Math.floor(Math.random * 6); and this method would basically remove all the floating points, 
 also an important note! is that  Math.floor(Math.random * 6); this would just give us a random number between 0 and 6 excluding 6, Math.floor(Math.random * 6) + 1; and this would add 1 to any random number given and if it was 5 it will be 6 etc...
+
+
+
