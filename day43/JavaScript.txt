@@ -1,0 +1,1022 @@
+JavaScript is mainly used to add interactivity to websites.
+
+Learn more about JavaScript https://developer.mozilla.org/en-US/docs/Web/JavaScript 
+
+The <script></script> html element is used to add internal javascript to the html page.
+
+console.log("hello world"):  is used to output information to the console, it's basically a method.
+
+note! the semicolon in javascript is optional but the convention for the best practice is to use it.
+
+Values: Strings, numbers, booleans, objects, arrays....
+Variables: are labelled or named data containers. var and let are used to declare a variable.
+
+The main differences between let, var and const when declaring a variable.
+Var
+Scopes to the nearest function block or global scope
+Can be re-assigned and re-declared
+Not block-scoped (can be accessed outside the block it's declared in)
+
+Let
+Scopes to the nearest block (e.g., if statement, loop, code block)
+Can be re-assigned, but not re-declared
+Block-scoped (cannot be accessed outside the block it's declared in)
+
+Const
+Scopes to the nearest block (e.g., if statement, loop, code block)
+Cannot be re-assigned or re-declared
+Block-scoped (cannot be accessed outside the block it's declared in)
+
+When to use each:
+
+Use var when you need to declare a variable that needs to be accessible outside the current scope (e.g., in an outer function).
+
+Use let when you need to declare a variable that needs to be accessible only within the current block (e.g., within an if statement or loop).
+
+Use const when you want to ensure that a variable's value cannot be changed once it's set.
+
+note! reassign a value be it to a const or anything else is reassigning a value with an equal sign not to some property of the object but to the const itself.
+
+alert(""); is a javascript command which is used to display the between brackets content and you should press ok to remove the popup.
+note! you need quotes around strings but you don't need quotes for numbers.
+
+<script>
+    alert('Hi, I\'m Mustafa!'); so the reason there is a backward slash after the I to inform javascript that this is not the closing tag but rather a normal text.
+
+</script>
+
+To link the javascript page to the html page we use the script unlike the css we don't use the link tag e.g. 
+<head>
+  <script src="app.js"></script>
+</head>
+note! if you want to write code inside the script tag don't use the src="" attribute i.e. don't link to an external javascript page.
+
+note!the backticks `` allow you to add whitespace and formatting to the string, making it easier to read and understand.
+
+Arrays: are used to store a collection of elements from any data type and they are created using the square brackets, i.e. using the same syntax of the variable but adding square brackets after the = sign e.g.
+let numbers = [1, 2, 3, 4, 5];
+let fruits = ['apple', 'banana', 'orange'];
+
+variable names cannot start with a number in JavaScript.
+
+Array elements are accessed using zero-based indexing. For example, to access the first element of an array:
+console.log(numbers[0]); // Output: 1
+
+Array elements can be modified or reassigned by specifying the index of the element:
+
+fruits[1] = 'pineapple';
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+Elements can be added to the end of an array using the push() method and removed from the end using the pop() method.
+
+fruits.push('mango');
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange', 'mango']
+
+fruits.pop();
+console.log(fruits); // Output: ['apple', 'pineapple', 'orange']
+
+note! in the arrays put every single value in a different quote lest you want them to be displayed as one value.
+
+Objects: are used to store collections of key-value pairs, where each key is a unique property name and each value can be any data type, such as numbers, strings, booleans, arrays, functions, or even other objects.
+to declare an object just like the arrays but instead of [] we use the {}. 
+e.g.
+let person = {
+  name: 'Alice',
+  age: 30,
+  isStudent: true, /*a variable*/
+  hobbies: ['reading', 'painting'],
+};
+note! for the object to specify one of its properties you can use the dot notation . e.g. alert(person.age)
+
+note! you only need to add the var or let keywords when you first assign a variable but if you want to change the value of an existing variable you only need to type its name you should not use the var or let keyword.
+
+FUNCTIONS:
+A function is a block of code that can be executed multiple times from different parts of your program.
+The syntax is as follows-
+
+function greet(name) {
+  alert("Hello " + name);
+}
+greet("Mustafa Osman"); 
+
+note! in between the brackets we're declaring a parameter basically it's like a new variable which doesn't not have a global scope.
+1. Declare the function using the function keyword, followed by the name of the function.
+2. Specify the parameter list within the () brackets (if needed) (also a function can have more than one parameter seperated by commas), in this case the parameter is the name variable.
+3. Write the code that will be executed when the function is called within the {} brackets.
+4. Call the function by using its name and passing any required arguments.
+
+note! In the context of a function, a parameter list refers to the list of variables that are passed to the function when it's called. 
+
+The RETURN STATEMENT:
+The return statement is used to exit the function and send a value back to the caller.
+an example:
+function calcAge(userAage) {
+  return userAge - 18;
+}
+let finalAge = calcAge(30);
+alert(finalAge); // Output: 12
+
+note! if you have multiple parameters you can seperate with commas.
+note! A function is basically a custom command.
+
+Another interesting excercise:
+//no:1 Create three new variables
+// let courseName = "100 Days of code";
+// let price = 59;
+// let goals = ["learn programing", "gain extra knowledge", "become independent"];
+
+//no:2 Output ("alert") the three variable values
+// alert(courseName);
+// alert(price);
+// alert(goals);
+
+//no:3 Try "grouping" the three variables together and still output their values thereafter
+let group = {
+  courseName: "100 Days of code",
+  coursePrice: 59,
+  mainGoals: ["learn programing", "gain extra knowledge", "have fun"],
+};
+
+alert(group.courseName);
+alert(group.coursePrice);
+alert(group.mainGoals);
+
+//no:4 Also output the second element in your "main goals" variable
+alert(group.mainGoals[1]);
+
+//no:5 Add a custom command that does the following:
+//    - Use your "main goals" variable and access an element by its identifier
+//    - The concrete identifier value should be dynamic / flexible
+//      (i.e. the command can be executed for different identifier)
+//    - The "main goals" variable should also be dynamic: The command should work
+//      with ANY list of values
+//    - The custom command should provide the accessed value (i.e. the list element)
+
+function getListItem(array, arrayIndex) 
+{
+  let arrayElement = array[arrayIndex];
+  return arrayElement;
+}
+//no:6 Execute your custom command from (5) and output ("alert") the result
+let firstGoal = getListItem(group.mainGoals, 0);
+alert(firstGoal);
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+METHODS:
+Methods are basically functions inside an object with the same syntax just without using the function keyword.
+Just like a variable in an object is called a property, a function in an object is called a method.
+
+e.g. 
+const person = {
+  name: 'John',
+  sayHello: function() {
+    console.log(`Hello, my name is ${this.name}!`); //The this keyword refers to the object that the method belongs to.
+  }
+};
+person.sayHello(); // Output: Hello, my name is John!
+note! to execute a method, just like when you execute a variable i.e. a property in an object by using the dot notation you do the same for the method.
+person.greet();
+
+A method is a function that is a property of an object.
+We define methods using the function keyword but we just don't write function before the method name but we define the name before the function and that is a method.
+
+
+note! in vscode methods have purple square boxes and properties have blue rectangular boxes.
+console.log("hello world"):  is used to output information to the console, it's basically a method thats why when we execute it we add parenthesis.
+note! after using the console.log() method you can check the results in the developer tools in the console.
+
+Math Operations:
+note! numbers without decimal places are called integers and numbers with decimal places are called floats.
+console.log(10 + 4);
+console.log(10 - 4);
+console.log(10 * 4);
+console.log(10 / 4);
+console.log(11 % 4); //the modulus operator gives the remainder of the division so 11 divded 4 the answer would be a float which means it doesn't fit therefore the modulous operator checks how many times does 4 fit into 11 and gives the remainder which in this case is 3.
+console.log((10+3-5)*10);
+
+let result = (10+3-5*10)*10;
+result = 10 * 4;
+result = result +1;
+result++; this variable is the same as result = result +1;. i.e. it adds one to the variable.
+result--; and this subtracts one. 
+
+sometimes you don't want to just add one or subtract one;
+result+=5; the shortened version of result = result +5; if you want to add += or subtract -= or divide /= or multiply *= more than one.
+
+You can even use + plus + operator to concatenate two strings like for example console.log("Mustafa "+"Osman"); but you can't use the minus or the * or the divide etc... operators and if you did you would get a NaN(Not a number)( A special value that exists in JavaScript for cases like this.)
+
+you can also use the shorthand result = 4**3; for the result = 4*4*4;
+
+let userName = "Mustafa";
+console.log(userName.length); So using the .length dot notation gives you the length of the characters and in this case it will print it to the console.
+
+note! a string is not an object but we can still in javascript use the dot notation to access various methods and properties which is mainly used (the dot notation) in objects to access their properties an e.g. is userName.length.
+
+JavaScript dot notation methods:
+the first e.g. was the .length, but there are more e.g. .toUpperCase or .toLowerCase etc...
+
+note! The length property can also be used in arrays for e.g.
+let hobbies = ["Sports", "Cooking"];
+console.log(hobbies.length); //the answer will be "2" because there are two values in the hobbies array.
+
+The Window object and the document object:
+
+The window and document variables are built in variables which then in turn, contain built in functions;
+
+The window object is often referred to as the "global object" in JavaScript, because it has a special role in the execution of JavaScript code. It's the top-level object in the scope chain, and all other objects and variables are contained within it.
+
+The window object is the global object in a web browser, representing the current window of a web page. It provides access to various properties and methods that allow you to interact with the browser's window, such as:
+
+window.innerWidth: Returns the width of the window.
+window.innerHeight: Returns the height of the window.
+window.outerWidth: Returns the outer width of the window (including borders and scrollbars).
+window.outerHeight: Returns the outer height of the window (including borders and scrollbars).
+window.scrollX: Returns the horizontal scroll position of the document.
+window.scrollY: Returns the vertical scroll position of the document.
+window.location: Returns a Location object that provides information about the current URL.
+window.history: Provides access to the browser's history stack.
+document Object
+
+The document object represents the HTML document that is currently being viewed in the browser window. It provides access to various properties and methods that allow you to interact with the document, such as:
+
+document.body: Returns the <body> element of the document.
+document.documentElement: Returns the <html> element of the document.
+document.title: Returns or sets the title of the document.
+document.head: Returns a collection of all <head> elements in the document.
+document.querySelector(): Selects a single element based on a CSS selector.
+document.querySelectorAll(): Selects multiple elements based on a CSS selector.
+document.getElementById(): returns the element with the specified id attribute
+document.getElementsByClassName():  returns a collection of elements that have the specified class name.
+The differences:
+The window object is broader in scope, encompassing both the document and other browser-related functionality. The document object is more focused on the specific HTML document being viewed in the browser window.
+The window object has many properties and methods that are not related to the document, such as those for interacting with the browser or setting timers. The document object primarily focuses on properties and methods related to the document's structure, content, and behavior.
+
+The DOM(Document Object Model):
+
+What is the DOM?
+The DOM is a tree-like data structure that represents the structure of an HTML document. It's created by the browser when it parses the HTML code of a web page and turns it into a structured representation of the document's content, including:
+
+Elements: The individual HTML elements, such as <div>, <p>, <img>, etc.
+Attributes: The attributes of each element, such as href for <a> tags or src for <img> tags.
+Text nodes: The text content of the elements, such as the text within a <p> tag.
+Comment nodes: The comments in the HTML code, such as <!-- comment -->.
+Document object: The top-level object that represents the entire document.
+How does the DOM work?
+
+When a browser loads an HTML document, it creates a DOM representation of the document by parsing the HTML code and building a tree-like structure. 
+This structure is then used by JavaScript to access and manipulate the document's content.
+An example:
+<html>
+  <head>
+    <title>My Web Page</title>
+  </head>
+  <body>
+    <h1>Welcome to my web page</h1>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <p>This is a paragraph of text.</p>
+    <img src="image.jpg" alt="An image on my web page">
+  </body>
+</html>
+
+In the example above, the DOM tree would look like this:
+Root Node (html)
+  |- Head Node (head)
+    |- Title Node (title)
+  |- Body Node (body)
+    |- Heading Node (h1)
+    |- Unordered List Node (ul)
+      |- List Item Node (li)
+      |- List Item Node (li)
+      |- List Item Node (li)
+    |- Paragraph Node (p)
+    |- Image Node (img)
+
+This is just one example of a simple HTML document, but the DOM tree can become much more complex as you add more elements and attributes to your HTML code.
+
+note! this console.log(window.document) or this console.log(document); both gives us access to our DOM.
+
+note! console.log is a method that writes a message to the console. It is used to log information about the state of your program or to display output from your code.
+
+note! console.dir, on the other hand, is a method that logs an object or value to the console, but it also provides additional information about the object or value, such as its type, properties, and methods.
+When you call console.dir, it will print the object or value in a more detailed format, including:
+
+note! console.dir is a debugging tool that shows the internal structure and properties of an object. When you log an object with console.dir, it will display its internal representation, including all its properties, methods, and nested objects.
+
+console.dir (document) will show you the properties and methods of the document object, including:
+Properties: Such as title, URL, body, head, images, etc.
+Methods: Such as getElementById, getElementsByTagName, getElementsByClassName, etc.
+Event listeners: Such as event listeners attached to the document, like click events or keypress events.
+
+Explanation of (window object):
+note! When opening the console.log(window); in your console the methods are marked by the f symbol because methods are basically functions built into an object and properties are all the properties without the f symbol.
+When you open the console and type console.log(window);, you will see a representation of the window object, which is the global object in a web browser. The window object is an instance of the Window class, which is part of the Web APIs.
+
+In the console output, you will see a representation of the window object, which includes:
+Properties: These are attributes or values that are associated with the window object. For example, window.innerWidth, window.innerHeight, window.location, etc. These properties do not have a function keyword, so they are represented without the f symbol.
+Methods: These are functions that are part of the window object. For example, window.alert, window.prompt, window.setTimeout, etc. These functions have a function keyword (f) in front of them in the console output.
+
+The reason for this is that JavaScript is an object-oriented language, and everything is an object or a function. Methods are essentially functions that are attached to an object, and they are represented as such in the console output.
+
+note! The DOM is basically a translation of our HTML code.
+
+Loading Our Script Correctly:
+e.g. 1
+<head>
+ <script src="app.js"></script>
+</head>
+<body>
+</body>
+
+document.body.children[1].children[0].href = "https://google.com";
+So In the case above this code will make an error because the <script></script> tag is beign parsed in the <head></head> element i.e. the javascript code is being executed before the html code in the <body></body>element is executed i.e. the javascript code linked to the elements in the <body></body> will not work.
+
+e.g. 2
+<head>
+</head>
+<body>
+ <script src="app.js" defer></script> note! the script tag should be in the end of the body element.
+</body>
+Now the error will go away.
+
+Summary:
+In the first example, the script tag is loaded in the <head> section of the HTML document, which means the JavaScript code is executed as soon as the HTML document is parsed. At that point, the <body> element has not yet been parsed, so trying to access its child elements will result in an error.
+By moving the script tag to the end of the <body> section, as shown in the second example, you're ensuring that the JavaScript code is executed after the HTML document has finished parsing and all the elements have been loaded. This way, when you try to access the <body> element and its children, they will be available and your code will work as expected.
+
+Another way:
+note! the above way of moving the <script> tag to the bottom of the body section is one way of solving this error but there is another elegant way of solving this error;
+and that is the defer attribute  <script src="app.js" defer></script>, the defer attribute is used in HTML to delay the execution of a script until the HTML document has been fully parsed and all its content has been loaded, and that is called a boolean attribute because you don't have to set a value you just add it like this defer
+
+note! The boolean attribute is an attribute with no value which is either there or not e.g. novalidate to remove the default validation by the browser or required which makes it a required field or you won't be able to submit.
+
+note! you can also write JavaScript code in the console(of the browser or your command prompt )  in the consle you can write HTML, JavaScript, Git, etc...
+
+DOM:
+note! The HTML content does not just consist of HTML elements but also consists of texts and the text pieces are also stored in the DOM 
+and in the console when you type document.body.children (the .children will only include child html elements) but if you rather use document.body.childNodes(a node is either text or a html element) and the entire DOM content is translated into nodes,
+//(By the way we're using document(for the entire document) then body as it's the child of the document we want to access in the DOM.) and document.body.children[0] to access the children of the body in the html, note! the number between the square brackets is the number of the child we want to access, we could even use document.head etc...
+and if you use document.body.firstChild(which access the first child node which can be a text node, comment node, element node), that's why we use firstElementChild(if we want to only access the first element child not any other child)
+the document.body.children[0].textContent = "newContent"; the textContent property allows you to modify the content of the property.
+let h1var = document.body.children[0];
+console.dir(h1var.parentElement); the parentElement property allows you to target the parent of the specified element.
+
+but using the drilling approach be useful but mostly only if you want to access the direct child or a parent element of another element
+
+instead its more common that you use the query methods which are provided to you by the browser such as:
+document.getElementById("idName") Returns the element with the specified ID
+document.getElementByClassName(className)Returns the element with the specified class name
+document.getElementsByTagName('tag'): Selects all HTML elements that are of the provided HTML tag type
+document.querySelector("#id-name")  Returns the first element that matches the specified selector (for the id selector you use # and for the class you use . or for the property selector you just the the property for e.g. "h1" ) you could also for e.g. attract the first element or second element which is a child of the specified element for e.g. document.querySelector("p a" or "p h1").
+document.querySelectorAll(".class-name") Returns a NodeList of all elements that match the specified selector (because remeber you can use the same class selector on many properties)
+
+//MY EXCERCISES:
+
+//console.log(window.document);
+//console.log(document);this and the above do the same thing.
+
+//console.dir(document);
+
+//document.body.children[1].children[0].href = "https://google.com"; // so in this code(the .href="")we're changing the path inwhich the link is leading us to which google.com and it was basically just our local development server, all the dots are basically just the paths in javascript.
+//the above indented code
+//the defer attribute
+//soultions to the error
+
+//DOM (Document Object Model)
+
+// let acnchorElement = document.getElementById("external-link");
+// acnchorElement.href = "https://google.com";
+
+// acnchorElement.href = document.querySelector("#external-link");
+// acnchorElement.href = "https://academind.com";
+
+
+//The tasks:
+// 1. Select the <h1> element by "drilling into the DOM" and
+//    save it in a variable with a name of your choice
+// 2. Use the variable from (1) and get access to the "parent"
+//    element of the stored <h1> element (i.e. to the <body> element)
+//    BONUS: Try using the variable from (1) to get access to the
+//    sibling element (i.e. the <p> element next to the <h1> element)
+// 3. Select the <h1> element with getElementById and store in
+//    the same or a new variable (up to you)
+// 4. Select the second <p> element with querySelector (you might
+//    need to add something in the HTML code, e.g. a class)
+//    and store it in a new variable with a name of your choice
+// 5. BONUS TASK: Try changing the text content of the <p> element
+//    you selected in (4) and set it to any other text of your choice
+
+The answers:
+//1 
+let h1var = document.body.children[0];
+//it could also be solved this way document.body.firstElementChild; (because no 0 is basically the first element child)
+console.dir(h1var);
+//no2
+console.dir(h1var.parentElement);
+//the bonus
+h1var = document.body.children[1];
+//no3
+h1var = document.getElementById("newVar");
+console.dir(h1var);
+//no4
+let paragraph = document.querySelector(".paragraph");
+console.dir(paragraph);
+//no5
+let para = (document.querySelector(".paragraph").textContent = "New content");
+//you could also do it this way para = document.body.children[1].textContent = "New Content".
+console.log or console.dir(para); 
+End of the tasks.
+
+There are three other very important kinds of DOM manipulation and those are:
+1.Adding a new element, 2.Removing an existing element, 3.Moving an existing element to a different place.
+
+1. Adding a new element using the DOM manipulation:
+//The three steps we typically execute when we add a new element 
+
+no1 Create the new element, 
+document.createElement("a"); this will create a new anchor element, The createElement() method in JavaScript is used to create a new element node in the Document Object Model (DOM). It takes one argument, which is the name of the element you want to create.
+let newAnchorElement = document.createElement("a");
+new anchorElement.href = "https://google.com"; 
+new anchorElement.textContent = "This leads to Google"; 
+
+no2 Get access to the parent element that should hold the new element, 
+let firstParagraph = document.querySelector("p");
+
+no3 insert the new element into the parent element.
+firstParagraph.append(newAnchorElement); The append() method in JavaScript is a part of the Document Object Model (DOM) and is used to add new content to an element. It is used to append a string of HTML, a text node, or another element to the end of an existing element.
+note! you could also use the appendChild method to add the element.
+append() and appendChild() are very similar but there are slight differences.
+
+
+2. Removing an existing element using the DOM manipulation:
+//The two steps to remove an existing element.
+
+//no1 Select the element that should be removed.
+let firstH1Element = document.querySelector("h1");
+
+//no2 Remove it!
+firstH1Element.remove(); [The remove() method is a part of the Node interface in JavaScript, and it's used to remove an element or a node from its parent node.]
+//another way also could be to call the parent element of the h1 element and then remove the child [firstH1Element.parentElement.removeChild(firstH1Element);] its true that this way is more complex and longer but its the only way which works on older browsers like internet explorer older versions.
+
+
+//3. Moving an existing element using the DOM manipulation:
+firstParagraph.parentElement.append(firstParagraph); //or you can use insertBefore() method i.e. firstParagraph.parentElement.insertBefore(firstParagraph);
+
+The innerHTML method:
+
+Similar to the textContent method which gives you access to the textContent of the specified element the innerHTML.
+e.g. console.log(firstParagraph.innerHTML); //so the outcome is that you will find all the HTML element inside this selector in the console.
+console.log(firstParagraph.innerHTML);
+//firstParagraph.textContent = "Hi This is <strong>important!</strong>"; in this case the between brackets will be displayed as normal text including the stong element and will not be interpreted as code by the browser that's why we use innerHTML;
+
+firstParagraph.innerHTML = "Hi This is <strong>important!</strong> "; //this innerHTML method unlike the textContent does not only take text as a value but could also take code alongside text.
+//This is very useful because if we have more complex content that should be inserted we could just use the innerHTML method instead of creating elements with createElement() method and then appending them manually with the append() method.
+
+note! Why would you ever use document.createElement() for creating a new element, if you could use innerHTML instead?
+The answer is; document.createElement() gives you direct access to the created element- you can use that access to configure it via its properties and methods(e.g. addEventListener(), or setting attributes and properties like classes, styles e.g. element.setAttribute(), element.className = "myClassName" etc..., You can also modify the element's child nodes, append or remove siblings, or even replace the entire content of the element.)
+
+The addEventListener() method:
+
+An event listener is a function that gets executed when a specific event occurs on an element, such as a click, hover, or key press.
+The addEventListener() adds an event listener to an element, which means it registers a function to be called when a specific event occurs on that element. The event listener function is triggered whenever the specified event occurs on the element.
+
+The syntax:
+element.addEventListener(eventName, eventListenerFunction);
+
+note! don't forget to declare the html element using the DOM inside the javascript file using document.querySelector or getElementByClassName or getElementById or just de
+The element is the HTML element you want to attach the event listener to.
+The eventName is the type of event you want to listen for (e.g., "click", "mouseover", "keydown", etc.).
+The eventListenerFunction is the function that will be called when the event occurs.
+
+Example:
+
+let paragraphElement = document.querySelector("p");
+
+function changeParagraphText() {
+  paragraphElement.textContent = "Clicked";
+}
+paragraphElement.addEventListener("click", changeParagraphText); 
+//imp note when we write our function in the second parameter we donot write it with the () brackets, because we donot want the browser to execute the function immediately but we want it to wait untill the first parameter's value is true then execute the function and that's why we ommit the brackets because we don't want the function to be executed as soon as the browser reads the function.
+
+In this example, we're attaching an event listener to the paragraphElement variable that listens for a "click" event. When the button is clicked, the text will be modified to "Clicked".
+
+another example:
+
+function retrieveUserInput() {
+  let enteredText = inputElement.value; //note! we're using the .value property which can be used either to set or to return the current value etc... now in this occassion we're returning the value entered in our <input type="text"> i.e. textbox into the console.log basically to save all the values the user entered into our console
+  console.log(enteredText);
+}
+
+inputElement.addEventListener("input", retrieveUserInput);
+
+The event object:
+
+let inputElement = document.querySelector("input");
+
+function retrieveUserInput(eventPara) {
+  //let enteredText = inputElement.value;
+  let enteredText = eventPara.target.value;
+  //let enteredText = eventPara.data; 
+  console.log(enteredText);
+  //console.log(eventPara);
+}
+inputElement.addEventListener("input", retrieveUserInput);
+
+/*
+In the context of addEventListener and the "input" event, the eventPara parameter is an object that provides information about the event that occurred.
+When you use addEventListener with the "input" event, it listens for any changes to the input element's value. When the user types something or changes the value in some way, the event is triggered.
+
+The eventPara object contains properties that describe the event, such as: [note! when we console.log it, it will appear in the console i.e. those properties]
+
+target: The element that triggered the event (in this case, the input element).
+type: The type of event (in this case, "input").
+timeStamp: The time at which the event occurred.
+`key**: If applicable, the key pressed by the user (e.g., a character or a modifier key).
+
+In this example code, retrieveUserInput is a function that gets called whenever the input element's value changes.
+The eventPara parameter passed to this function contains information about the event that triggered the function call and an e.g. of that information is those properties shown above which are generated automatically by the browser and also a couple of methods.
+so no matter which event you're listening to you will always get an event object automatically but the content of that object will depend on the kind of event. //our event is the input event.
+
+note! you will see an important difference between using eventPara.data and using the inputElement.value, when we used the .value we got the full value that is stored but with .data we just got the concrete input that was entered.
+
+So to conclude, in all functions connected via addEventListener we get a default parameter and that is basically an object describing the event that occurred.
+*/
+
+In JavaScript, .length is a property that returns the number of elements in an array or the length of a string.
+let arr = [1, 2, 3, 4, 5];
+console.log(arr.length); // Output: 5
+
+note! Also there is the maxlength and the minlength attributes which decides the maximum and the minmum length of charactes needed.
+
+Changing the styling using JavaScript:
+We can also manipulate our DOM elements so that they would change the styling,
+
+e.g. const spanElement = document.getElementById("remaining-chars");
+spanElement.textContent = "59";
+//We're basically using the style as a nested property in the DOM, we write the element we want to apply our styles to followed by a dot then the style keyword then a dot then they style we want to apply then an equal sign then the value of the styles, e.g.spanElement.style.color = "red" note! we will add the applied styles as a string though unlike in css it is just bascially the keywords.
+e.g.[spanElement.style.textAlign = left]note! note the textAlign is written differently, that's how its written in css(text-align), so it's basically the same word or combination of word but without a dash and that's but instead using this camelCase notation which is basically the naming convention in JavaScript and this convention is used here because dashes are not allowed in JavaScript, so text-align would be invalid in JavaScript.
+
+note! so to summarise remeber the camelCase notation, and the values as a string.
+
+choosing classes in CSS:
+input.warning {
+  background-color: rgb(248, 191, 145);
+}
+//in css if we don't add a space between the dot and the input element selector it means that we want to target all the elements that have the .warning class, and this is basically called a class selector, i.e. target all the input elements which have this class,
+but if you add a space between the class and the element, like this: input .warning, it's called a descendant combinator. The space means that the CSS engine will look for an <input> element as a parent element, and then target any child elements with a class of "warning".
+
+
+          The difference between the html class and javascript className property:
+
+The className property is a JavaScript property that returns or sets the value of the class attribute. It's a read-write property, meaning you can both read and modify its value.
+Example: spanElement.className = "new-class";
+
+           Key differences:
+
+Read-write vs. read-only: className is a read-write property, while class is a read-only attribute.
+Multiple classes: Both className and class can handle multiple class names, but className allows you to set multiple classes at once using a space-separated list.
+
+spanElement.className = "first-class second-class" is a JavaScript code snippet that sets the className property of a span element (spanElement) to a string value "first-class second-class".
+
+In HTML, the class attribute allows you to assign one or more class names to an element. When you set the className property in JavaScript, you're essentially updating the value of that class attribute.
+
+The string "first-class second-class" is a space-separated list of class names. When you assign this value to className, the browser will treat each word as a separate class name, and add them to the element's class list.
+
+Here's what happens:
+The element's current class list is empty.
+The JavaScript code sets spanElement.className = "first-class second-class".
+The browser splits the string into two separate class names: "first-class" and "second-class".
+The browser adds both class names to the element's class list.
+Now, the element's class attribute looks like this: <span class="first-class second-class">.
+
+Alongside the className we also have the classList JavaScript property:
+
+Which provides a way to manipulate the element's class list. It's a DOMTokenList object that allows you to add, remove, and toggle class names on an element.
+
+Here are some common methods and properties of the classList object:
+
+Methods:
+
+add(classNames): adds one or more class names to the element.
+remove(classNames): removes one or more class names from the element.
+toggle(className): adds the class name if it's not already present, or removes it if it is.
+contains(className): returns a boolean indicating whether the element has a specific class name.
+
+Properties:
+
+length: returns the number of class names on the element.
+item(index): returns the class name at the specified index.
+values(): returns an array of all class names on the element.
+toString(): returns a string representation of the class names, separated by spaces.
+
+nextElementSibling:
+nextElementSibling returns the next element in the DOM tree that has the same parent as the current element. If there is no next element sibling, it returns null.
+
+// 5 Practice tasks!
+
+// 1) Select the two <button> elements and store them in two different variables.
+//    - Select the first button without adding or using any "id"
+//    - Select the second button by using an "id"
+//answer1
+var button1 = document.querySelector("button");
+var button2 = document.getElementById("button2");
+
+// 2) Add "click" event listener to both buttons (with two different functions).
+//    The functions should "console.dir()" the clicked buttons.
+//    - Output the first button by using the variable in which it's stored
+//    - Output the second button WITHOUT using the variable in which it's stored
+//answer2
+/*
+function removeParagraph() {
+  console.dir(button1);
+}
+function changeBackgroundColor(event) {
+  console.dir(event.target);
+}
+
+button1.addEventListener("click", removeParagraph);
+button2.addEventListener("click", changeBackgroundColor);
+*/
+// 3) Now select and store the paragraphs mentioned in the text you see on the page
+//    (first and third paragraph)
+//    - Select BOTH paragraphs by drilling into the document and "navigating" to the
+//      mentioned elements
+//    - If you struggle with DOM drilling, use "ids" instead but watch the solution!
+//answer3
+const firstParagraphElement = document.body.children[2].children[1];
+console.log(firstParagraphElement);
+const thirdParagraphElement = document.body.children[2].children[3];
+// const thirdParagraphElement =
+//   firstParagraphElement.nextElementSibling.nextElementSibling; another not needed but possible way of choosing the element of button2.
+console.log(thirdParagraphElement);
+
+// 4) Change the functions from (2) such that:
+//    - The first button removes the third paragraph (i.e. the <p> prior to it)
+//    - The second button changes the background color of the first paragraph to blue
+/*
+//answer4
+function removeParagraph() {
+  thirdParagraphElement.remove(); //remember only write the function without brackets when you're writing them in thr addEventListner() so they won't take effect immediately and in other cases when we want the function's to take effect immediately we write it with the brackets in the end.
+}
+function changeBackgroundColor(event) {
+  //firstParagraphElement.style.backgroundColor = "blue";
+  //firstParagraphElement.className = "blue-bg";
+  firstParagraphElement.classList.add("blue-bg"); //this and the 2 lines above are all possible solutions for this task
+}
+
+// button1.addEventListener("click", removeParagraph);
+// button2.addEventListener("click", changeBackgroundColor);
+*/
+// 5) Solve (4) both by changing the "inline styles" as well as by adding CSS classes
+//    Note: You'll have to add those classes to the styles.css file first!
+//answer5
+function removeParagraph() {
+  thirdParagraphElement.remove(); //remember only write the function without brackets when you're writing them in thr addEventListner() so they won't take effect immediately and in other cases when we want the function's to take effect immediately we write it with the brackets in the end.
+}
+function changeBackgroundColor(event) {
+  //firstParagraphElement.style.backgroundColor = "blue";
+  //firstParagraphElement.className = "blue-bg";
+  firstParagraphElement.classList.add("blue-bg"); //this and the 2 lines above are all possible solutions for this task
+}
+
+button1.addEventListener("click", removeParagraph);
+button2.addEventListener("click", changeBackgroundColor);
+
+Advanced JavaScript control structures:
+Conditional Code Exection(if-else statements):
+Repeated Code Execution (Loops):
+
+A boolean value is basically true or false.
+
+Comparison operators: ==, === (Equality operator), >,<,>=,<=(greater than, less than, greater or equal, lesser or equal operator), !, !=, !==(negation/inverse i.e.(something is NOT true)) 
+
+example of using negation operators: !(5>5) //so that checks if 5 is not greater than 5 but we can't do it like this 5!>5 this is because the ! operator only works with boolean expressions, not with numerical values.
+In general, the ! operator is used like this:
+!(expression) - negates the result of the expression (e.g. (true) becomes (false) and vice versa)
+So, in this case, (5 > 5) would evaluate to (false), and then the ! operator would negate it to (true).
+
+note! the difference between == and === is:
+==, != (loose equality) 
+The == and != operator checks whether the two values are equal, without considering their data types. This means that it will perform a coercion (automatic conversion) of the values to a common type before comparing them. 
+examples:
+5 == '5' returns true, because the string '5' is coerced to the number 5
+0 == null returns true, because null is coerced to the value 0
+{} == {} returns 
+
+===, !== (strict equality) 
+The === operator checks whether the two values are equal and have the same data type. This means that it will not perform any coercion, and will return false if the values are not of the same type.
+examples:
+5 === '5' returns false, because the string '5' is not a number
+0 === null returns false, because null is not equal to the number 0
+{} === {} returns false, because two empty objects are not considered equal
+
+Logical operators: &&(AND) ||(OR), the and && operator has a higher pr
+
+if-else statements:
+
+In JavaScript, the if statement is used to execute a block of code if a specified condition is true. 
+The else statement is used to specify a block of code to be executed if the if condition is false.
+ 
+ The basic syntax is:
+ if (condition) {
+  // code to be executed if condition is true
+} else {
+  // code to be executed if condition is false
+}
+
+
+
+
+//**********there is also more info in the demo.js file (imp)
+
+
+
+
+boolean values: JavaScript has this concept of truthy and falsy values, incase javascript needs a boolean like in an if statement where the condition is not specified like in the below example JavaScript will try to convert the provided value into a boolean, 
+for e.g. an empty string or the number 0 = false, a string with a value in it will is true even if the value is 0 or false or even a blank, a
+
+const enteredUserName ="";
+if (enteredUserName) { //this condition is the same as enteredUserName.length > 0
+  console.log("input is valid");
+}
+
+Another type of control structures is the for, for of, for in & while loops:
+
+1. For Loop
+The for loop is a traditional loop that allows you to execute a block of code repeatedly for a specified number of iterations. It consists of three parts:
+
+Initialization: The initial value is set before the loop starts.
+Condition: The condition is evaluated at the beginning of each iteration. If it's true, the loop continues. If it's false, the loop exits.
+Increment/Decrement: The variable is updated after each iteration.
+
+for (let i = 0; i < 5; i++) {
+  console.log(i); // prints 0, 1, 2, 3, 4
+}
+
+2. For...Of Loop
+
+The for...of loop is used to iterate over an iterable object, such as an array or a string (i.e. a name and you want to iterate over the letters or even an object). It's similar to the for loop, but it automatically iterates over the elements of the iterable and assigns each element to the variable specified in the loop.
+
+In the for...of loop, the const fruit is actually a variable that is declared inside the loop block. It's not referencing the outer fruits constant.
+
+const fruits = ['apple', 'banana', 'cherry'];
+for (const fruit of fruits) {
+  console.log(fruit); // prints 'apple', 'banana', 'cherry'
+}
+In the for...of loop, the const fruit is actually a variable that is declared inside the loop block. It's not referencing the outer fruits constant.
+In JavaScript, when you use the const keyword with a variable name inside a block (like a for...of loop), it creates a new variable with that name, which is scoped to that block only.
+
+Example 2: Iterating over a string
+const str = "hello";
+for (const char of str) {
+  console.log(char);
+}
+//explanation of example2:
+1. The for...of loop iterates over the characters of the str string.
+2. The loop variable char is initialized to the first character of the string, which is "h".
+3. The loop body is executed for the first time, and the character "h" is logged to the console using console.log(char).
+4. The loop increments the iteration variable (in this case, char) to the next character in the string, which is "e".
+5. Steps 2-4 are repeated until the end of the string is reached.
+6. The final output is: "h", "e", "l", "l", "o".
+
+Years ago, we didn't have the for-of loop in JavaScript.
+
+To still loop through all the elements of an array, this code could be used:
+for (let i = 0; i < someArray.length; i++) {
+    console.log(someArray[i]);
+}
+This code still works today and you can absolutely use it instead of using a for-of loop. But of course it's longer and a bit more clunky, so there is no strong reason to use that code, unless you prefer it.
+
+3. For...In Loop
+
+The for...in loop is used to iterate over the properties of an object. It's useful when you need to access each property name and value of an object.
+the for-in is meant to be used over an object.
+
+const car = { name: 'Toyota', model: 'Camry', year: 2015 };
+for (var prop in car) { //prop is our helper variable
+  console.log(prop); this will print, "name", "model" and "year" without the values.
+  console.log(car[prop])//this will print up the values, also we could use console.log(car["name"]) and that would be equivelant to car.name and this console.log(car[prop]) would be equivelant to in value to car.prop, and as prop is beign inside the object therefore it will print all their values.
+
+  //car.prop this will not work because it will look for a property named prop but when we use the square brackets we're looking for the value of the prop which is stored in the car
+
+}
+
+4. While Loop
+
+The while loop is a conditional loop that continues to execute as long as a specified condition is true.
+
+let i = 0;
+while(i<10) {
+  console.log(i);
+  i++;
+}
+
+another example:
+
+let isFinished = false;
+while (!isFinished) {
+  isFinished = confirm("Do you want to quit!");
+}
+console.log("Done!"); //this code will not be executed until the condition is done.
+
+The confirm("are you ok"); function is similiar to alert but it only allows us to answer with yes or no
+
+note! when you create a const inside a function(//we know that constants can only be used once) it is exclusive to that function i.e. you can use the same name of the const outside the function because it's like a different dimension(the function);
+
+The Math.random object: note! random is a method inside the Math object
+it's a globally available math object which is built into the browser which has a .random method, by default it gives you a random number between 0 and 1 i.e. a floating point,
+but we dont't want a random number between 0 and 1, so we will multiply math.random() by the number specified in my case it's math.random()*6; so now it will give use a random number between 0 and 6 because 0*6 is 0 and 1*6 is 6; but the unfortunate is that we would still get floating point numbers therefore,
+we would use another useful built-in method of the same Math. object which is Math.floor(Math.random * 6); and this method would basically remove all the floating points, 
+also an important note! is that  Math.floor(Math.random * 6); this would just give us a random number between 0 and 6 excluding 6, Math.floor(Math.random * 6) + 1; and this would add 1 to any random number given and if it was 5 it will be 6 etc...
+
+While, do While and for loops:
+The main difference between while and do while is that,
+in the while loop you write the condition before the code,
+e.g.
+let myNumber = 0;
+while (myNumber < 50){
+  myNumber++;
+  console.log(myNumber)
+}
+
+and in the do while loop you write the code before the condition which means that no matter if the condition is met or not the code will be executed at least once, e.g.
+let myNumber = 0;
+do {
+  myNumber +=2;
+  console.log(myNumber);
+} while (myNumber < 50);
+
+The for loop:
+The difference between the for loop and the while loop is that the intial value, the condition and the increment/decrement are all written between the brackets i.e. inside the loop,
+unlike the while loop inwhich the variable is declared outside the loop and you have less control over the initialisation, so if you know the number of iterations you want use a for loop and if you you're not sure about the number of iterations use a while loop.
+e.g.
+for(let myNumber = 0; myNumber < 50; myNumber++){
+  console.log(myNumber);
+}
+
+the for loop can also be written like this;
+for(let myNumber = 0; myNumber < 50;){
+  console.log(myNumber);
+  myNumber++; //so you can define it just like a while loop inside between the curly brackets.
+}
+
+and also like this;
+
+let myNumber = 0; //you can define the variable outside the loop just like the while loop.
+
+for(myNumber < 50;){
+  console.log(myNumber);
+  //myNumber++; so you can define it just like a while loop inside between the curly brackets.
+}
+
+note! no matter how you write the for loop you will have to write the semi-colon inside the brackets unlike the while loop.
+
+Another example of using the loop:
+
+let name = "Mustafa";
+let nameCount = 0;
+let letters;
+while(true) {
+  letters = name[nameCount];
+  console.log(letters);
+  if(letters === "f") break; //The break keyword in JavaScript is used to exit a loop or a switch statement prematurely
+  nameCount++;
+}
+//so basicaly this loop will loop through the name up untill it reaches the letter "f" then it will break out of the loop.
+
+The continue statement: it skips the rest of the loop and continue back at the top;
+
+Explaining the following code:
+
+THE CODE:
+const formElement = document.querySelector("form");
+
+function savePlayerConfig(event) { //note! event is a parameter that is passed to an event handler function, and it has properties like target, type, and preventDefault().
+  event.preventDefault();
+}
+formElement.addEventListener("submit", savePlayerConfig);
+
+THE EXPLAINATION:
+1. This line uses the querySelector method to select the first <form> element in the HTML document. 
+
+2. formElement: This is a reference to the HTML form element that you want to attach the event listener to.
+
+3. addEventListener("submit", savePlayerConfig): This line adds an event listener to the form element. The event listener is triggered when the form is submitted (e.g., when the user clicks the submit button). The savePlayerConfig function will be called when this event occurs.
+
+4. function savePlayerConfig(event) { event.preventDefault(); }: This is the function that will be called when the form is submitted. It takes one argument, event, which represents the event that triggered the function call.
+
+5. event.preventDefault(): This line prevents the default behavior of the form submission from occurring. When a form is submitted, the browser typically sends a request to the server and reloads the page. By calling event.preventDefault(), we're stopping this default behavior and preventing the form from being submitted.
+note! the .preventDefault(); is a method which prevents the default behaviour of the browser which is submitting. 
+
+In summary, this code sets up an event listener for a form element that calls the savePlayerConfig function when the form is submitted. The savePlayerConfig function simply prevents the default form submission behavior, which means that instead of sending the form data to the server, it will not do anything,
+this code is part of a larger script that handles player configuration data, and this function is used to save the configuration settings without actually submitting the form.
+
+Another new feature: FormData();
+
+const formElement = document.querySelector("form");
+
+function savePlayerConfig(event) {
+  event.preventDefault();
+  const formData = new FormData();
+} 
+formElement.addEventListener("submit", savePlayerConfig);
+
+Explanation:
+const formData = new FormData();
+This line creates a new instance of the FormData object. FormData is an API that allows you to collect data from a form and send it to a server as a series of key-value pairs.
+Think of FormData like an object that can hold multiple key-value pairs, where each key is a property name (e.g., "name", "email", "password") and each value is the corresponding value entered by the user in the form fields.
+By creating a new FormData object, we're preparing to collect data from the form fields and send it to the server.
+
+event.target: returns the element that triggered the event 
+event.type: returns the type of event (e.g. "click", "mouseover", etc.)
+event.preventDefault(): prevents the default action of the event from occurring
+
+/* A useless example
+Example:
+const formData = new FormData();
+formData.append("name", "John");
+formData.append("age", 30);
+Creating a FormData(); object and appending values into it.
+*/
+
+function savePlayerConfig(event) { //note event is just a choosen name
+  event.preventDefault();
+  const formData = new FormData(event.target); //event.target: returns the element that triggered the event
+}
+formElement.addEventListener("submit", savePlayerConfig);
+                                                           HTML (<form></form>)
+FormData is indeed a built-in JavaScript object that takes a form element as an argument, and it automatically extracts the values from all input elements within that form, such as text inputs, checkboxes, radio buttons, and more.
+So, in this code, const formData = new FormData(event.target); is creating a new FormData object and passing the form element (event.target) to it, which will automatically extract the values from all input elements within the form.
+
+The const formData = new FormData(event.target); statement creates a new FormData object, which is a way to send form data to a server, similar to an HTML form. The FormData object has its own methods, such as append(), set(), and delete(), which can be used to add data to the object.
+The .get() method is a method of the FormData object that allows you to retrieve the value of a specific key.
+
+Explanation of the following code:
+
+function savePlayerConfig(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target); //This line creates a new instance of the FormData object.
+  //event.target: returns the element that triggered the event
+  const enteredPlayername = formData.get("playername").trim(); //trim removes any unnecessary white space.
+
+  if (!enteredPlayername) {
+    // we don't need to write if(enteredPlayername === ""){}, we can just write if(!enteredPlayername){} because if enteredPlayername is empty i.e. no entered value then the outcome will be false because an empty string === false if it's in a place where a boolean is expected.
+
+    event.target.firstElementChild.classList.add("error"); //so because we already know that the form is already stored in th event.target so we're targeting the form element and it firstElementChild then we're targeting the css by using the classList method to create a new css class then we go to the css page to add styles to that class.
+
+    errorsOutputElement.textContent = "Please enter a valid name";
+    return; //we're not using return to return any value because there's no value after return.
+
+    //return in general returns the value to the place the function was executed, but it also has another function when you execute return you stop the execution of the function.
+    //the return statement will end the function so any lines of code after the return statment will not be executed.
+  }
+}
+
+example: 
+
+function startNewGame() {
+  if (players[0].name === "" || players[1].name === "") {
+    alert("Please set custom names");
+    return; //this will prevent further execution of this function i.e.if the condition of the if statement is met then the function will no longer get executed otherwise the code after the return statement will get executed.
+  }
+  gameAreaElement.style.display = "block";
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The trim() method is a method of the String object in JavaScript, and it is used to remove whitespace characters (spaces, tabs, line breaks) so basically white space infront or after so unecessary white space.
+
+The data attribute in HTML:
+
+The data attribute is a custom attribute that allows you to store arbitrary data or metadata about an element. 
+The name of a data attribute must begin with the string 'data-' and must contain at least one character after the hyphen using any HTML naming convention.
+
+Use the data-* attribute when you need to store custom data or metadata about an element that is not provided by the standard HTML attributes. Here are some scenarios where data-* is particularly useful:
+Customizing behavior: When you need to store data that will be used to customize the behavior of an element, such as a tooltip, popup, or animation.
+Passing data between layers: When you need to pass data from a server-side language to a client-side script or from one script to another.
+Providing metadata: When you need to store metadata about an element, such as its category, ID, or author.(popups, )
+
+How to use the data-* attribute:
+
+To use the data-* attribute, follow these steps:
+
+Choose a unique name for your attribute by prefixing it with data-. For example, data-myattribute.
+Assign a value to the attribute using the syntax <element data-myattribute="myvalue">.  after the hyphen after the data is called key.                                                               
+                          
+
+
+Two dimensional array:
+
+A two dimensional array is basically an array of arrays:
+e.g.
+const gameData = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+To access elements in a two-dimensional array, you use two indices: the first for the row and the second for the column:
+
+CopyReplit
+console.log(twoDimArray[0][0]); // Output: 1 // counting starts from 0 in JavaScript
+console.log(twoDimArray[1][2]); // Output: 6 //because the counting is from 0 row 1 technically means the second row and column 2 means the third column.
