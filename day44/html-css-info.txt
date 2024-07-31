@@ -1,0 +1,657 @@
+
+<p>
+        Learn more about all available HTML elements on
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"
+          >the MDN HTML element refrence</a
+        >
+</p>
+ 
+<p>
+        Learn more about CSS properties and values on
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference"
+          >the MDN CSS property refrence.</a
+        >
+</p>
+
+ Also use google fonts to add any fonts to your page.
+ And also use W3schools https://www.w3schools.com for refrences.
+
+note! the <body> is for the elements visible in the pagem the <head> is for elements which are not.
+
+note! when linking a HTML file to multple CSS files and those CSS files have different values for the same element the later link would overwrite the links before it in the HTML head.
+note! the specifity in css, i.e. if the element beign refered to is more specific then it's rules will be applied, for e.g. 
+<nav>  if we want to make the font of the <a> element white and then we style the <ul> element's font with white, then it will become white and all elements within the <ul> but if we then style the <li> element's font to black then the <li> style will overwride the <ul> one because its more specific and so on.
+  <ul> 
+    <li> 
+      <a></a> 
+    </li> 
+  </ul> 
+</nav>
+ Inline elements are HTML elements that are displayed inline with the surrounding content, meaning they do not start on a new line and only take up as much width as necessary. 
+ Some common inline elements include <span>, <a>, <strong>, <em>, and <img>.
+
+ Block level elements on the other hand start on a new line.
+
+The dislplay property can be used to change an element type from block to inline or inline-block...
+The <div> element in HTML is a generic container element that is used to group together other elements and to create logical divisions or sections within a webpage.
+The <div> element itself does not have any specific semantic meaning and is primarily used for styling purposes or to apply JavaScript functionality.
+
+the <span> element is an inline container which is usually used within elements, and it's used to highlight specific parts of the elements to apply styles to that part.'
+the span elements can also be used in the same way like the div element if someone wants an inline container and viceversa
+
+e.g. <p>This is a <span id="highlighted-text">highlighted</span> word.</p>
+#highlighted-text {
+  color: red;
+  font-weight: bold;
+}
+
+The <nav> element in HTML is used to define a section of a webpage that contains navigation links. 
+
+In HTML, the <section> element is used to define sections or groupings of content within a webpage. It is a semantic HTML5 element that helps structure the content of a webpage in a meaningful way,
+
+Pseudo-classes, on the other hand, are keywords added to selectors that specify a special state of the selected element
+Some common pseudo-classes include :hover, :focus, :active, and :nth-child().
+e.g. a:hover {
+  color: red;
+}
+
+Inheritance:  Inheritance is the mechanism by which styles applied to a parent element can be passed down to its children.
+For example, if you set the font size of the body element to 16px, all text content inside the body element (e.g., paragraphs, headings) will inherit that font size unless explicitly overridden.
+
+
+ to select an element by its id write the hash symbol followed by the id name*/
+ ctrl and / is shortcut for adding a comment*/
+
+  <!--metadata i.e. elements which are not visible in the page itself e.g. style element-->
+  <head>
+    <link href="day4.css" rel="stylesheet" />
+    <!--link elemnet is a void element i.e. self closing tag-->
+    <!--href for the refrences and rel for the relation-->
+    <!--link tag is diffrent from the anchor tag because anchor tag gives a clickable link while link tag links two pages together-->
+    <title>My daily challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+A link directs the user to another webpage or resource, while an anchor directs the user to a specific point within the same webpage. Both are used to improve navigation and user experience on websites.
+A class selector can be used for multiple elements whilist an id selector can only be used once and id is declared with a # and a class with a .
+
+p {
+  font-family: "fira-sans", "times-new-Roman"; /* the second font is a fallback font*/
+  text-align: center;
+  color: rgb(83, 75, 75);
+}
+
+id's # are unique classes . are not
+
+CSS box model content-
+(padding:(inside space): top, right, bottom, left; border: border radius border type border color;)
+padding is inside, margin is outside space.
+
+Box-shadow property: "horizontal offset e.g. 1px"  "vertical offset e.g. 1px" "blur radius e.g. 2px" "rgb(red, gree, blue)"
+
+Inset: this keyword creates an inset shadow making the shadow look like its inside the element, 
+offset-x: Specifies the horizontal distance of the shadow from the element. Positive values move the shadow to the right, while negative values move it to the left.
+offset-y: This value specifies the vertical distance of the shadow from the element
+blur-radius: This value specifies the blur radius of the shadow. The larger the value, the more blurred the shadow appears.
+spread-radius: This value specifies the spread radius of the shadow. Positive values cause the shadow to expand and grow bigger, while negative values cause it to shrink.
+color: This value specifies the color of the shadow. You can use named colors like red, hexadecimal codes like #ff0000, RGB values like rgb(255, 0, 0), or RGBA values like rgba(255, 0, 0, 0.5) for transparency.
+
+In CSS, you can use the border property to define a border around an element. The border property can specify the width, style, and color of the border.
+e.g. ...
+#id {
+    border: [border-width] [border-style] [border-color];
+} colors (names(red), hexadecimal values(#rrggbb) rgb values(255, 0, 0) or hsl values(0, 100%, 50%))
+
+<pre></pre> <!--the preformatted tag is used to output anything between it as plain text, and &gt is greater than & lt is less than-->
+
+text-decoration: dashed or underlined or none etc...
+text-transform: capitalize or lowercase or uppercase or inheret etc...
+
+left to right is the main axis and top to bottom is the cross axis.
+
+Flexbox 
+
+[The CSS Flexbox] display: flex; allows us to manage the space or the way elements are aligned and positioned inside the flex container,
+the container or the element in which the display: flex; is in is the parent container and the elements inside it are the children.
+flex-direction: row or column; row is the default direction of flexbox, flex-direction: row-reverse or column-reverse; (row-reverse reverses the position of the elements in the cross axis and column-reverse does the same but in the main axis).
+
+flex-wrap: nowrap or wrap;  the default value of the flexbox is nowrap (is a property in CSS that allows you to wrap flex items to a new line when there is not enough space to fit them in a single line. and nowrap means that the items will not wrap into a new line)
+
+flex-flow:row nowrap, is combination of both flex-direction and flex-wrap so its a shortcut.
+
+justify-content: ;  values (center or start or end or stretch or space-between or space-evenly etc...) along the main axis.
+align-items: ; values (center or start or end or stretch or space-between or space-evenly etc...) is used to specify how items within a flexbox or grid container should be aligned along the cross axis.
+flex-start is the default value.
+align-content: ; is the same as align-items: ; but align-items is used when there is only one line of items but align-content is used when there are multiple lines of items.
+gap: ;
+
+the difference between justify-content and align-items is that;
+justify-content is used to specify how items within a flexbox or grid container should be aligned along the main axis.
+align-items is used to specify how items within a flexbox or grid container should be aligned along the cross axis.
+
+background-image: url(/images/places/ocean.jpg) this property in css allows you to add an image as a Background image.
+background-position: center; to make the image centered.
+background-size: cover; to make the image's size just cover the entire page.
+
+Opacity is a CSS property that allows you to control the transparency or opacity of an element. It's a value that ranges from 0 (fully transparent) to 1 (fully opaque) the values are 0.1 0.2 etc...
+in the rgba() the a is opacity
+
+Position: ; property
+position: static; Position is a CSS property that allows you to control the placement of an element within its containing element or the browser window.
+the default position is static, but there are 5 values: 1.static, 2.relative, 3.absolute, 4.fixed, 5.sticky
+
+Static (Default):
+Positioned based on the normal document flow.
+Not affected by top, right, bottom, left, or z-index properties.
+
+Relative:
+Positioned relative to their normal position in the document flow.
+Can be offset from their original position using top, right, bottom, and left properties.
+
+Absolute:
+Positioned relative to their nearest positioned ancestor (or the initial containing block if no ancestor is positioned).
+Removed from the normal document flow and do not affect other elements' positions.
+
+Fixed:
+Elements with position: fixed; are positioned relative to the viewport (the browser window or the user's screen).
+They are removed from the normal document flow and do not affect other elements' positions.
+
+top: 20px;
+bottom: 10px;
+right: 10px;
+left: 20px;
+
+The percentage value is relative to its parent element so 100% means cover the entire element.
+e.g. width: 50%; will take 50% of the parent element etc...
+
+The box-sizing property is a CSS property that determines how the width and height of an element are calculated and applied.
+the box-sizing property has three values, content-box(default), border-box and inherit.
+
+In conten-box the padding and the border increases the width,
+but in border-box the padding and the border is taken from the width,
+and inherit means that the element will inherit the value of that property from its parent element, so if the property of its parent element was border-box would it also be border-box
+
+note! the content-sizing property does not apply to margin i.e. it doesn't affect the margin it only applies to content, padding and border.
+
+the <img src"" alt""> img element normally has an src""attribute and alt"" alternative.
+the <p> <strong> Mustafa</strong></p> is an inline element which be used to turn its content to bold.
+
+object-fit is a CSS property that allows you to control how an image or other element is resized to fit its container.
+When you set object-fit on an element, you can specify how the element should be resized to fit its container.
+The possible values are:
+
+1.cover: Scale the element to cover the entire container, while maintaining its aspect ratio. This means that some parts of the element may be cropped.
+
+2.contain: Scale the element to fit within the container, while maintaining its aspect ratio. This means that the element may not fill the entire container, but it will not be cropped.
+
+3.fill: Scale the element to fill the entire container, while maintaining its aspect ratio. This means that the element will be stretched to fit the container, and some parts of it may be distorted.
+
+4.scale-down: Scale the element down to fit within the container, while maintaining its aspect ratio. If the element is larger than the container, it will be scaled down to fit.
+
+the difference between scale-down and cover, cover will make make the image cover the entire container and if the image is larger it will be cropped down and if its smaller it will be stretched to fit the container,
+but with scale down it does the same except that if the image is smaller it will not be stretched to fit the container.
+
+Margin collapsing:
+Margin collapsing occurs when two or more elements with margins touch each other, and the browser "collapses" the margins to create a single, larger margin. This can affect the layout and appearance of your page, especially when working with complex layouts and nested elements.
+
+an example to illustrate margin collapsing:
+<div style="margin: 10px; border: 1px solid black;">Element 1</div>
+<div style="margin: 20px; border: 1px solid black;">Element 2</div>
+
+So in Element 1 and Element 2 the horizontal margin will be 20px and the vertical margin will be 30px,
+that's because horizontal(left and right) margins collapse i.e. the gap's value will be of the largest value,
+but vertical(top and bottom) margins donot collapse i.e. the gap's value will be the value of both margins added together.
+
+To avoid margin collapsing or to control its behaviour: Padding is normally used because when they are added they donot collapse and if the margins collapse adding a padding value would help to add the value of the collapsed margin i.e. the margin with the smaller value.
+
+Linear-gradient:(to top, red 50%, green 30%, blue 20%); can have 2values i.e. the gradient direction or the gradient percentage and after that you can add as many colors as you want.
+and if you don't specify percentages after each color, the default behavior is that the colors will be evenly distributed along the gradient.
+e.g.
+When you use linear-gradient(45deg, grey, light-brown), you're creating a linear gradient that transitions from grey to light-brown, 
+and the angle value is 45deg, the angle value is measuered from the x-axis (ie.e bottom left to the y-axis i.e. top right).
+0° (or 360°) is at the bottom left
+90° is at the top left
+180° is at the top right
+270° is at the bottom right
+
+The overflow property is a CSS property that determines what happens to the content of an element when it exceeds its defined size. It's commonly used to control the behavior of elements that contain too much content, such as text, images, or other elements.
+
+The values of the overflow property:
+visible: This is the default value. It means that the content will be displayed as usual, and any excess content will be visible outside the element.
+hidden: This value hides the excess content, so only the content that fits within the element's boundaries is visible.
+scroll: This value adds a scrollbar to the element, allowing users to scroll through the excess content.
+auto: This value is similar to scroll, but it only adds a scrollbar if the content overflows the container. If the content fits within the container, no scrollbar is added.
+inherit: This value inherits the overflow property from its parent element.
+overlay: This value is similar to hidden, but it also adds a visual indicator (such as a dashed line) to show that there is more content available.
+
+Here are some common use cases for the overflow property:
+** Preventing text wrapping**: Set overflow to hidden to prevent text from wrapping onto a new line.
+Creating a scrollbar: Set overflow to scroll to add a scrollbar to an element, allowing users to scroll through excess content.
+Hiding excess content: Set overflow to hidden to hide excess content that exceeds an element's boundaries.
+
+The overflow property can also be applied to specific axes, such as:
+
+overflow-x: controls horizontal overflow
+overflow-y: controls vertical overflow
+The CSS grid:
+
+notes!-  
+The CSS Grid is a two-dimensional layout system, meaning it can create a grid with both rows and columns. 
+This allows for more complex layouts with multiple axes of alignment.
+On the other hand, CSS Flexbox is a one-dimensional layout system, meaning it's designed for laying out elements in a single dimension, either horizontally or vertically. 
+While Flexbox can be used to create complex layouts, it's typically used for simpler layouts such as:
+
+- Laying out a series of items horizontally or vertically
+- Creating a navigation bar or footer
+- Designing a responsive layout with a single axis of alignment
+
+CSS Grid, on the other hand, is better suited for more complex layouts that require:
+- Multiple axes of alignment (both rows and columns)
+- Complex grid structures with multiple rows and columns
+- Precise control over grid cell sizes and spacing
+- Ability to create grid templates with repeating patterns
+display: grid;
+
+grid-template-columns: 2 or 1fr 3fr or 100px 300px; (example for some possible values for the property)
+so grid-template-columns is aproperty that can be used to define the number of columns as in the e.g. above (2columns),
+or it can be used to divide the coulumns in the page as in the e.g. above (the 1st column has 1fraction of the space whilst the second coulumn has 3fracts of the page),
+or it can be used to define coulumn widths as in the e.g. above the 1st coulumn has 100px and the 2nd has 300px.
+
+The grid-coulumn property: is a property that allows you to specify which grid columns an element should span. 
+e.g. grid-column: 3 or 3/4; etc...
+so In the first e.g. above the target is the 3rd coulumn and it only spans that coulumn.
+In the second e.g. above the the target is the 3rd coulumn and it spans up to the 4th coulumn.
+
+the difference between grid-column and grid-template-coulumns is:
+- grid-template-columns: is a property that defines the template of the grid, specifying the number of columns and their widths.
+- grid-column: is a property that specifies which grid columns an element should occupy.
+
+A pseudo class in css:
+li:first-of-type {
+  background-color: yellow;
+}
+The :first-of-type pseudo-class targets the first element of a specific type(in this case the list element) within its parent element.
+
+another one is the: 
+li:nth-of-type(3) {
+  background-color: yellow;
+}
+The li:n-of-type() pseudo-class targets the element's number specified in its columns, the element of a specific type(in this case the li: list items) within its parent element.
+
+The gap property: 
+Gap is a property that adds space between grid cells or grid rows.
+It creates a gap between the cells or rows within a grid container.
+Gap is measured from the inside of the grid cells or rows.
+Gap is only applicable when using the grid-template-columns or grid-template-rows properties to create a grid layout.
+
+The first value in the gap property is for the rows and the second is for the columns.
+
+The <meta charset="UTF-8" /> i.e. unicode UTF-8: its a link in the head.
+The UTF-8 (8-bit Unicode Transformation Format) metacharset is a character encoding scheme used to represent Unicode characters ranging from all the alphabet to numbers and other characters like arrows etc... .
+before addin the hex code of the UTF-8 charset or character set you should add &#x and thats because This is because the &#x notation is part of the HTML and XML standards for representing Unicode characters.
+
+list-style: none; to remove all the styles from your lists.
+text-decoration: none; to remove all style form your texts specificly used for anchor tag.
+
+One of the bigger disadvantages of the px unit in css is that it is not scalable and it reduces the user focus, for e.g. when you define a fixed pixel values on an image or fonts users and viewers of your website wont be able to adjust the view to their need.
+
+Comparing Units: px, %percentage, em, rem -
+
+Pixel px: The pixel unit is the most common unit used in CSS, and its used to define the size and position of elements on a web page.
+
+Percentage (%): The percentage unit is used to define the size and position of elements relative to their parent element. It is often used for layout purposes, such as setting the width of a container element, also its hard to manage due to its - Cascading nature.
+a cascading nature is When you use a percentage value in CSS, it can affect the styles of elements that are nested within it. This is because percentage values are calculated relative to the parent element, which means that the styles can cascade down to child elements.
+
+Em (em): The em unit is a relative unit that is based on the font size of the parent element. It is often used for typography purposes, such as setting font sizes or line heights.
+1em is like 100%, 2em is like 200% 0.5em is 50% etc...
+
+Root Em (rem): The rem unit is a relative unit that is based on the root element of the document, which is typically the <html> element. It is often used for typography purposes, such as setting font sizes or line heights.
+
+differences between em, rem and %:
+note em and % are very similar when used in typography but not when used in other contexts, like padding margin etc...
+em: relative to its own element, em is based on the font size of its element in all contexts when used in padding, margin, font-size, width etc... and if the element has not font size it will be relative to the browser's default font size.
+rem: its the same as em but it's relative to the root element i.e. the <html></html> element
+percentage %: relative to its parent element in all contexts so when used in padding or margin or font-size etc... if the parent element for e.g. when used for padding and the parent element has no padding it will be browsers default padding, unlike em which will be relative to the browser's default font size if the elemnt no the parent has no font size.
+
+note! em is relative to font-sizes in its element and precentage % is relative to the same property of the parent element.
+note! if we assume the brower's default font size is 16px then 1.5rem if there is no font-size in the root element will be 24px.
+note! the root element is allways the html element.
+note! rem is always the prefered choice if applicable.
+
+Responsive Web Design- Media Queries:
+
+Media queries allows you to apply different styles based on specific conditions, such as the size and type of device, screen resolution, or even the orientation of the screen.
+e.g. @media(screen and (max-width: 800px))
+{
+  styles to be applied here
+}
+max-width defines the maximum width inwhich the CSS rules defined will be applied and if the screen size was above the max-width then the default browser styles will be applied, 
+min-width defines the minimum width inwhich the CSS rules defined will be applied and if the screen size was below the min-width then the default browser styles will be applied.
+
+common media queries breakpoints
+Portrait: smartphone 480px, tablet 768.
+Landscape: Notebook 1024px, Desktop computer 1200px, TV >1200px.
+
+The display: none; property removes the items displayed in the element its addded to.
+
+The **aside element**
+
+The <aside> element in HTML is used to define a section of the document that is related to the main content, but not part of the main content.
+It's a block level element and a semantic i.e. i.e. it provides meaning to to the element.
+
+It is often used to provide additional information, such as:
+Sidebars or navigation bars
+Related articles or links
+Definitions or explanations
+Pull quotes or other secondary content
+Footnotes or references
+
+The target pseudo-selector: The :target pseudo-class is specifically designed to target elements with an ID attribute that matches the URL fragment. Because ID attributes in HTML start with a # symbol, the :target pseudo-class can be used to target those elements.
+
+<a href="#my-anchor">Link to my-anchor</a> note! also this is an internal link because it links to an #id inside the same page, but for external links we need to have the href= "link to the specified page" and not just an id. 
+
+[z-index property]
+note! the z-axis is from back to front basically the depth of the object, the z-axis defines the position and orientation along the line of sight, which points from the back of the object to the front.
+The z-index property is a CSS property that determines the stacking order of elements. It's a way to control which elements are displayed on top of others, and which elements are hidden behind others.
+the z-index is commonly used in Overlap elements: When you want to overlap two elements on a page, you can use z-index to control which element is displayed on top of the other for example a drop-down menu you apply the hover pseudo-selector and use the z-index so that when the object is hovered the dropdown meny appears on top of the other objects, 
+or also by default in html elements are stacked on top of each other so if you want an element to appear on top of the other elements you can use the z-index: ; property.
+
+In most cases, you do need to apply a position property to an element in order to use the z-index property. This is because the z-index property only applies to elements that have a non-static position value.
+
+Here's a breakdown of the different position values and how they affect the z-index property:
+
+static: The default position value. Elements with a static position value do not have a z-index value.
+relative: The z-index property applies to elements with a relative position value. This means that the element will be positioned relative to its normal position in the document flow, and the z-index property will determine its stacking order.
+absolute: The z-index property applies to elements with an absolute position value. This means that the element will be positioned relative to its nearest positioned ancestor, and the z-index property will determine its stacking order.
+fixed: The z-index property applies to elements with a fixed position value. This means that the element will be positioned relative to the viewport, and the z-index property will determine its stacking order.
+So, if you want to use the z-index property, you'll need to apply a non-static position value (such as relative, absolute, or fixed) to the element.
+
+However, there are some exceptions:
+Flexbox: In flexbox layouts, elements can have a z-index value without applying a position property. This is because flexbox containers automatically apply a stacking context to their children.
+Grid: Similarly, in grid layouts, elements can have a z-index value without applying a position property. This is because grid containers automatically apply a stacking context to their children.
+
+In summary, while it's not strictly necessary to apply a position property to an element to use the z-index property, it's usually required unless you're using a flexbox or grid layout.
+
+the z-index values -
+1. Auto: which is 0(default) i.e. The browser will determine the stacking order of elements.
+2. Integer value (e.g., 1, 2, 3, etc.): This value specifies the stacking order of an element relative to its parent and siblings. Higher values are displayed on top of lower values, also you can use negative values.
+Example:
+.element1 {
+  position: relative;
+  z-index: 2;
+}
+In this example, .element1 will be displayed on top of other elements with a lower z-index value(and the default z-index value is 0).
+
+COLORS:
+The grey color is always required and it helps achive a more professional look for our websites.
+Some popular shades of grey that are commonly used in website design include:
+
+#F7F7F7 (a light, neutral grey)
+#E5E5E5 (a medium, balanced grey)
+#333333 (a dark, rich grey)
+#808080 (a dark, cool grey)
+
+The primary color of a website is the color that is most prominent and used as the background or main visual element. It's often the color that is most associated with the brand's identity and is used to create a consistent visual aesthetic across the website.
+The accent color is a secondary color that is used to add visual interest, emphasis, and contrast to your website's design. It's typically used to draw attention to specific elements, such as:
+CTAs (Call-to-Actions): Buttons, links, or other interactive elements that encourage users to take action.
+Icons: Small graphics or icons that represent actions, concepts, or emotions.
+
+CSS VARIABLES:
+CSS variables, also known as CSS custom properties, are a way to store and reuse values in your CSS code. They allow you to define a variable once and then use it throughout your code, making it easier to maintain and update your styles.
+context html{--fontttt: "times-new-roman", serif;} then you can use it in the css properties for e.g. font-family: var(fontttt);
+note! there should be two hyphens before the name, and to use in other css properties you use var(fontttt); e.g. font-family: var(fontttt);
+
+Selectors:
+1 html{}: is the root element of the html therefore all elements will inherit the rules applied to it and thats why most of the time we add the css custom properties in the html.
+2 :root{}:(a pseudo-selector) it's a pseudo class and it's used to target the root element like html element and unlike other pseudo classes it's not added to specfic selector rather it's used as a standalone selector.
+3 *{}: The * selector, also known as the universal selector, is a special selector that matches any element, regardless of its type or class. It's like a wild card that selects all elements in the document.
+
+CSS TRANSFORM AND TRANSTION properties:
+
+The transform: ; property
+The transform property is a CSS property that allows you to modify the visual representation of an element by applying transformations.
+The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.
+
+Here are some example values for the transform property:
+
+1. Rotation
+
+rotate(30deg): Rotates the element 30 degrees clockwise.
+rotate(-30deg): Rotates the element 30 degrees counterclockwise.
+rotate(45deg) or rotate(-45deg): Rotates the element 45 degrees.
+
+2. Scaling
+
+scale(2): Scales the element up to 2 times its original size.
+scale(0.5): Scales the element down to 0.5 times its original size.
+scale(1.5, 0.5): Scales the element up to 1.5 times its original width and down to 0.5 times its original height.
+
+3. Skewing
+
+skewX(30deg): Skews the element 30 degrees in the X-axis.
+skewY(30deg): Skews the element 30 degrees in the Y-axis.
+skewX(30deg) skewY(20deg): Skews the element 30 degrees in the X-axis and 20 degrees in the Y-axis.
+
+4. Translation
+
+translateX(50px): Moves the element 50 pixels to the right.
+translateY(50px): Moves the element 50 pixels down.
+translateX(-50px) translateY(50px): Moves the element 50 pixels to the left and 50 pixels down.
+
+5. Combination
+
+rotate(30deg) scale(2): Rotates the element 30 degrees and scales it up to 2 times its original size.
+skewX(30deg) translateX(50px): Skews the element 30 degrees in the X-axis and moves it 50 pixels to the right.
+
+
+The transition: ; property 
+
+Transitions enable you to define the transition between two states of an element. Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript.
+The transition CSS property is a shorthand property for transition-property, transition-duration, transition-timing-function, transition-delay, and transition-behavior.
+This property can be used to create animations, smooth transitions, and other effects.
+
+The full syntax of the transition property:
+transition: <transition-property> || <transition-duration> || <transition-timing-function> || <transition-delay> || <transition-behavior>;
+
+The transition property has 5 properties and each has many values e.g. transition: the property you want the transition to apply to e.g. transition-property:background-color;, the duration you want this transition to take e.g. transition-duration:1s;, the transition timing function sets how values are calculated for CSS properties being affected by a transition effect e.g. transition-timing-function: ease-in; or ease-out, the delay property specifies the duration to wait before starting a property's transition effect when its value changes e.g. transition-delay: 1s;, the transition behaviour property allows you to control how multiple transitions are executed when they target the same CSS property, it helps you Specify the order in which transitions are executed When multiple transitions are applied to the same property, this property determines the order in which they are executed e.g. inherit or discrete or normal 
+e.g. transition-property: background-color, color, opacity; transition-behavior: inherit
+
+note! that the transition-behavior property is only used when multiple properties are applied to the same CSS transition property. If you have only one transition applied to a property, you don't need to use this property i.e. the transition-property.
+
+The transition-behavior property has three values:
+normal: This is the default value, which means that transitions are executed in the order they are declared.
+inherit: This value means that the transition-behavior property is inherited from the parent element. This can be useful when you want to apply the same transition behavior to multiple elements.
+discrete: This value means that transitions are executed in a discrete manner, meaning that each transition starts from the end of the previous one. This can be useful when you want to create a more complex animation effect.
+
+All of those transition properties can be applied in one property which is the transition: background-color 1s ease-out 1s discrete;
+
+other useful examples
+e.g. the property
+transition-property: margin-right; first write the property that you want this transition to apply to.
+transition-property: margin-right, color;
+transition: all: Applies the transition effect to all properties that are changed by the CSS rule.
+transition: height, width: Applies the transition effect only to the height and width properties.
+transition: background-color, color: Applies the transition effect only to the background-color and color properties.
+
+---------------------------------------------------------------------------------------------------------------------------------
+The SVG's (Scalable Vector Graphics):
+The SVG's are basically a text based description of scalable images that can be rendered by our browser.
+SVGs are often used to create icons and logos for websites, apps, and other digital media.
+A common free website to use which has many predefined SVG icons is hericons(https://heroicons.com/)
+demonstration: to use it go to the website and copy the SVG you want to use and add it to the body element for e.g. 
+
+<div class="hat-icon">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+</svg>
+</div>
+
+WEBFORMS:
+There are special HTML elements for getting and handling user input.
+
+Key Form elements-
+The most important HTML element we will use to fetch user input is <input> which is a void element and the type attribute <input type="">,
+another important element is the <textarea> element which is an element which will allow us to fetch multiline text input,
+another important element is the <select> element which can be used to build dropdown multiple-choice or multi-select input,
+
+another important element is the <button></button> An element button used to reset or submit the form,
+note! the button element's default behaviour is to submit the form to the server but it can be used outside the form element and it's behaviour can be overwritten using the type="" attribute, but you always have to use javascript to make this button do something when it's clicked.
+type="submit": Submit the form when clicked (default behavior)
+type="button": Do nothing when clicked (no default behavior)
+type="reset": Reset the form to its initial state when clicked
+
+another form element is the <select> element is a form element used to create a dropdown menu or a list of options from which the user can select one or more values. It is commonly used to provide a user with a list of options to choose from, such as a list of countries, cities, or products, 
+e.g.
+<select>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</select>
+The <option> element is used to create a list of options for a user to select from in a dropdown menu or list of options, the <option> element is only valid when it is a child element of the <select> element. This is because the <option> element is used to create a list of options for a dropdown menu or list of options, 
+
+The form element is the main element which wraps all the form elements, it marks a web form area(group of form elements) and enables form submission
+THE <form></form> element wraps the user input elements inside it for e.g.
+<form>
+ <input type="text">
+ <button>Submit</button>
+</form>
+and its used to send the input data to the specified place or perform some other action, there are also two important attributes used with the form Element,
+the action and the method attributes <form action="domain/the pathi.e. file name" method=""></form>, 
+1. the action attribute allows you to define the url i.e. the path that the request should be sent to,
+2. the method attribute in the <form> element specifies the HTTP request method used to send the form data to the server. 
+
+The method attribute in the <form> element can only have two valid values: POST and GET.
+Any other value specified for the method attribute is considered invalid
+
+<form  action="" method="GET"> <input type="text"> <button> Submit </button> </form>
+GET: This is the default method attribute if the method attribute is not specified. 
+the GET request is used whenever some resource should be fetched, it's used to get an HTML file and display its content so by default if you enter a URL a browser sents a get request to get the URL and display it's content, like amazon.com etc...
+
+<form  action="" method="POST"> <input type="text"> <button> Submit </button> </form>
+POST: typically forms are submitted to then store some user data in a database on the backend not to get a new page with different data therefore if we use the POST we tell the browser to send the POST request to the server which then indicates that the server should store the data.
+
+note! no matter if you want to use a POST or GET request you want to make sure that any data that was entered in the form like in the input element is passed along with the request and to do that you need to add a special attribute to your input elements in the form and that is the name="" attribute.
+
+The name="" attribute: allows you to add a unique identifier to the <input type="text" name=""> element just like the id="" attribute but id="" doesn't work for form submission.
+
+THE LABEL HTML Element-----
+The <label></label> HTML element is used to associate a text description with a form control,
+The for attribute!
+The for attribute is used in the <label> element to associate it with a specific form control. It specifies the ID of the form control that the label is associated with.
+
+THE FOCUS PSEUDO SELECTOR-----
+The :focus pseudo-class is used to select an element that has focus. Focus is the state of an element when it is being interacted with, such as when a user clicks on a button or selects a checkbox so it can be used to add an attribute when a user does focus on an element.
+
+THE CSS CURSOR PROPERTY:
+The cursor property is used to specify the cursor type that appears when the user interacts with an element, for e.g. the pointer value basically makes the cursor looks like a hand pointer.
+
+THE VALUE attribute:
+The value attribute is used in HTML elements to specify the initial value of a form control, such as a text input, checkbox, or radio button. It is an attribute that can be used in conjunction with other attributes, such as name, type, and id, to create a form control.
+
+The value attribute in HTML is primarily used to:
+1. Set the initial value of a form control
+2. Provide a default value for the form control
+3. Validate user input data by checking if it matches the expected value
+
+THE <hr> HTML element is just a horizontal line
+
+<!--for the radio buttons we gave them all the same name and they are elements so that the user can only choose one at atime-->
+<label for="verify-text-sms">Via text message (SMS)</label>
+<input type="radio" name="verify" id="verify-text-sms" />
+
+<label for="verify-phone">Via a phone call</label>
+<input type="radio" name="verify" id="verify-phone" />
+
+<label for="verify-email">Via an email</label>
+<input type="radio" name="verify" id="verify-email" />
+
+note! the <select> element can be used as an alternative to radio buttons
+
+note! The boolean attribute is an attribute with no value which is either there or not e.g. novalidate to remove the default validation by the browser or required which makes it a required field or you won't be able to submit.
+
+The minlength="" attribute makes it invalid to enter less characters than the ones specified and the maxlength="" does the opposite.
+the min="" and max="" attributes doe the same but for numbers.
+
+The placeholder="" attribute demonstrate for the user an e.g. of what is expected for e.g. placeholder="Mustafa Osman" as an example of a name
+
+The rows="" attribute sizes the texxtboxs to the number of rows specified.
+
+The resize css property allows to choose how should your element be resized or not be resized for e.g. resize: none; or resize: vertical; or horizontal to decidde which way they should be able to resize.
+
+The <script></script> html element is used to add internal javascript to the html page.
+
+
+//this is the explanation of the button submit type.
+The button type is by default set to submit, but so it's easier to understand semantically we set the type to submit, also if you want to cancel the submit type you can you can just change the button type=""; to type="button";
+ <form>
+  <div>
+   <label for="playername">Player name</label>
+   <!--we're using the label for="" attribute to point at the playername input id="" attribute-->
+    <input type="text" name="playername" id="playername" />
+  </div>
+
+  <div>
+   <button type="button">Cancel</button>
+   <!--if you set the type="" to button inside the form it won't submit the form; and because we just want this button to cancel-->
+   <button type="submit">
+    Confirm
+   </button>
+   <!--this button will confirm and the upper one will cancel-->
+  </div>
+ </form>
+
+
+
+CSS provides several functions for calculations:
+
+calc(): performs a calculation and returns a value.
+min() and max(): returns the minimum or maximum value of two expressions.
+clamp(): returns a value within a specified range.
+round() and floor() and ceil(): perform rounding operations.
+
+div {
+  width: calc(100% - 20px); /* subtract 20 pixels from the parent element's width */
+  height: min(300px, 80vh); /* choose the minimum between 300 pixels and 80% of the viewport height */
+}
+
+button {
+  font-size: clamp(12px, calc(1em + 2px), 24px); /* adjust font size between 12px and 24px based on the root font size */
+}
+
+the repeat() function;
+#game-board {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem); /*6rem 6rem 6rem*/
+  grid-template-rows: repeat(3, 6rem); /* 6rem 6rem 6rem*/
+}
+ the repeat(); function tells css to write 3columns which are 6rem wide so its the same as writing (6rem, 6rem, 6rem)
+
+<button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
+<!--if you set the type="" to button inside the form it won't submit the form; and because we just want this button to cancel-->
+<button type="submit" class="btn">Confirm</button>
+<!--this button will confirm and the upper one will cancel-->
+
+
+The data attribute in HTML:
+The data attribute is a custom attribute that allows you to store arbitrary data or metadata about an element. 
+The name of a data attribute must begin with the string 'data-' and must contain at least one character after the hyphen using any HTML naming convention.
+
+Use the data-* attribute when you need to store custom data or metadata about an element that is not provided by the standard HTML attributes. Here are some scenarios where data-* is particularly useful:
+Customizing behavior: When you need to store data that will be used to customize the behavior of an element, such as a tooltip, popup, or animation.
+Passing data between layers: When you need to pass data from a server-side language to a client-side script or from one script to another.
+Providing metadata: When you need to store metadata about an element, such as its category, ID, or author.(popups, )
+
+How to use the data-* attribute:
+
+To use the data-* attribute, follow these steps:
+
+Choose a unique name for your attribute by prefixing it with data-. For example, data-myattribute.
+Assign a value to the attribute using the syntax <element data-myattribute="myvalue">.(the general syntax the element's name then data-yyy="thevalue")
