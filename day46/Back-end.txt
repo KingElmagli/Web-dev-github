@@ -1,0 +1,12 @@
+Client-side is the front-end, server-side is the back-end.
+
+The front-end is the code which excutes on the vistor's machine, its the code which controls what the vistors see.
+The languages used for the front-end are HTML, CSS, JavaScript.
+
+The back-end is the code which executes on the server which is a remote machine, it's the code which controls what is being served and executes behind the scenes, it may parse and store incoming data, fetch data, store file ...
+To write server-side code you need a programming language which is executed by the server, not the browser because that's the front-end(client-side)
+The languages used for example Python, PHP, C#, Java, Node.js etc...
+
+A server is just a regular computer, it's called a server because it serves a website, it sends back responses to the browsers sending requests.
+
+Node.Js is "JavaScript for server-side", it is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js allows developers to execute JavaScript code on the server side, enabling server-side scripting and the development of network applications.
