@@ -16,6 +16,8 @@
  Also use google fonts to add any fonts to your page.
  And also use W3schools https://www.w3schools.com for refrences.
 
+note! the <body> is for the elements visible in the pagem the <head> is for elements which are not.
+
 note! when linking a HTML file to multple CSS files and those CSS files have different values for the same element the later link would overwrite the links before it in the HTML head.
 note! the specifity in css, i.e. if the element beign refered to is more specific then it's rules will be applied, for e.g. 
 <nav>  if we want to make the font of the <a> element white and then we style the <ul> element's font with white, then it will become white and all elements within the <ul> but if we then style the <li> element's font to black then the <li> style will overwride the <ul> one because its more specific and so on.
@@ -337,6 +339,8 @@ Landscape: Notebook 1024px, Desktop computer 1200px, TV >1200px.
 
 The display: none; property removes the items displayed in the element its addded to.
 
+The **aside element**
+
 The <aside> element in HTML is used to define a section of the document that is related to the main content, but not part of the main content.
 It's a block level element and a semantic i.e. i.e. it provides meaning to to the element.
 
@@ -494,8 +498,24 @@ Key Form elements-
 The most important HTML element we will use to fetch user input is <input> which is a void element and the type attribute <input type="">,
 another important element is the <textarea> element which is an element which will allow us to fetch multiline text input,
 another important element is the <select> element which can be used to build dropdown multiple-choice or multi-select input,
+
 another important element is the <button></button> An element button used to reset or submit the form,
-and the <form></form> element wraps the user input elements inside it for e.g.
+note! the button element's default behaviour is to submit the form to the server but it can be used outside the form element and it's behaviour can be overwritten using the type="" attribute, but you always have to use javascript to make this button do something when it's clicked.
+type="submit": Submit the form when clicked (default behavior)
+type="button": Do nothing when clicked (no default behavior)
+type="reset": Reset the form to its initial state when clicked
+
+another form element is the <select> element is a form element used to create a dropdown menu or a list of options from which the user can select one or more values. It is commonly used to provide a user with a list of options to choose from, such as a list of countries, cities, or products, 
+e.g.
+<select>
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <option value="option3">Option 3</option>
+</select>
+The <option> element is used to create a list of options for a user to select from in a dropdown menu or list of options, the <option> element is only valid when it is a child element of the <select> element. This is because the <option> element is used to create a list of options for a dropdown menu or list of options, 
+
+The form element is the main element which wraps all the form elements, it marks a web form area(group of form elements) and enables form submission
+THE <form></form> element wraps the user input elements inside it for e.g.
 <form>
  <input type="text">
  <button>Submit</button>
@@ -518,3 +538,125 @@ POST: typically forms are submitted to then store some user data in a database o
 note! no matter if you want to use a POST or GET request you want to make sure that any data that was entered in the form like in the input element is passed along with the request and to do that you need to add a special attribute to your input elements in the form and that is the name="" attribute.
 
 The name="" attribute: allows you to add a unique identifier to the <input type="text" name=""> element just like the id="" attribute but id="" doesn't work for form submission.
+
+THE LABEL HTML Element-----
+The <label></label> HTML element is used to associate a text description with a form control,
+The for attribute!
+The for attribute is used in the <label> element to associate it with a specific form control. It specifies the ID of the form control that the label is associated with.
+
+THE FOCUS PSEUDO SELECTOR-----
+The :focus pseudo-class is used to select an element that has focus. Focus is the state of an element when it is being interacted with, such as when a user clicks on a button or selects a checkbox so it can be used to add an attribute when a user does focus on an element.
+
+THE CSS CURSOR PROPERTY:
+The cursor property is used to specify the cursor type that appears when the user interacts with an element, for e.g. the pointer value basically makes the cursor looks like a hand pointer.
+
+THE VALUE attribute:
+The value attribute is used in HTML elements to specify the initial value of a form control, such as a text input, checkbox, or radio button. It is an attribute that can be used in conjunction with other attributes, such as name, type, and id, to create a form control.
+
+The value attribute in HTML is primarily used to:
+1. Set the initial value of a form control
+2. Provide a default value for the form control
+3. Validate user input data by checking if it matches the expected value
+
+THE <hr> HTML element is just a horizontal line
+
+<!--for the radio buttons we gave them all the same name and they are elements so that the user can only choose one at atime-->
+<label for="verify-text-sms">Via text message (SMS)</label>
+<input type="radio" name="verify" id="verify-text-sms" />
+
+<label for="verify-phone">Via a phone call</label>
+<input type="radio" name="verify" id="verify-phone" />
+
+<label for="verify-email">Via an email</label>
+<input type="radio" name="verify" id="verify-email" />
+
+note! the <select> element can be used as an alternative to radio buttons
+
+note! The boolean attribute is an attribute with no value which is either there or not e.g. novalidate to remove the default validation by the browser or required which makes it a required field or you won't be able to submit.
+
+The minlength="" attribute makes it invalid to enter less characters than the ones specified and the maxlength="" does the opposite.
+the min="" and max="" attributes doe the same but for numbers.
+
+The placeholder="" attribute demonstrate for the user an e.g. of what is expected for e.g. placeholder="Mustafa Osman" as an example of a name
+
+The rows="" attribute sizes the texxtboxs to the number of rows specified.
+
+The resize css property allows to choose how should your element be resized or not be resized for e.g. resize: none; or resize: vertical; or horizontal to decidde which way they should be able to resize.
+
+The <script></script> html element is used to add internal javascript to the html page.
+
+
+//this is the explanation of the button submit type.
+The button type is by default set to submit, but so it's easier to understand semantically we set the type to submit, also if you want to cancel the submit type you can you can just change the button type=""; to type="button";
+ <form>
+  <div>
+   <label for="playername">Player name</label>
+   <!--we're using the label for="" attribute to point at the playername input id="" attribute-->
+    <input type="text" name="playername" id="playername" />
+  </div>
+
+  <div>
+   <button type="button">Cancel</button>
+   <!--if you set the type="" to button inside the form it won't submit the form; and because we just want this button to cancel-->
+   <button type="submit">
+    Confirm
+   </button>
+   <!--this button will confirm and the upper one will cancel-->
+  </div>
+ </form>
+
+
+
+CSS provides several functions for calculations:
+
+calc(): performs a calculation and returns a value.
+min() and max(): returns the minimum or maximum value of two expressions.
+clamp(): returns a value within a specified range.
+round() and floor() and ceil(): perform rounding operations.
+
+div {
+  width: calc(100% - 20px); /* subtract 20 pixels from the parent element's width */
+  height: min(300px, 80vh); /* choose the minimum between 300 pixels and 80% of the viewport height */
+}
+
+button {
+  font-size: clamp(12px, calc(1em + 2px), 24px); /* adjust font size between 12px and 24px based on the root font size */
+}
+
+the repeat() function;
+#game-board {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 6rem); /*6rem 6rem 6rem*/
+  grid-template-rows: repeat(3, 6rem); /* 6rem 6rem 6rem*/
+}
+ the repeat(); function tells css to write 3columns which are 6rem wide so its the same as writing (6rem, 6rem, 6rem)
+
+<button type="button" class="btn btn-alt" id="cancel-config-btn">Cancel</button>
+<!--if you set the type="" to button inside the form it won't submit the form; and because we just want this button to cancel-->
+<button type="submit" class="btn">Confirm</button>
+<!--this button will confirm and the upper one will cancel-->
+
+
+The data attribute in HTML:
+The data attribute is a custom attribute that allows you to store arbitrary data or metadata about an element. 
+The name of a data attribute must begin with the string 'data-' and must contain at least one character after the hyphen using any HTML naming convention.
+
+Use the data-* attribute when you need to store custom data or metadata about an element that is not provided by the standard HTML attributes. Here are some scenarios where data-* is particularly useful:
+Customizing behavior: When you need to store data that will be used to customize the behavior of an element, such as a tooltip, popup, or animation.
+Passing data between layers: When you need to pass data from a server-side language to a client-side script or from one script to another.
+Providing metadata: When you need to store metadata about an element, such as its category, ID, or author.(popups, )
+
+How to use the data-* attribute:
+
+To use the data-* attribute, follow these steps:
+
+Choose a unique name for your attribute by prefixing it with data-. For example, data-myattribute.
+Assign a value to the attribute using the syntax <element data-myattribute="myvalue">.(the general syntax the element's name then data-yyy="thevalue")
+
+
+Third-party packages:
+you can use bootstrap and/or any third party package to add anything you want to your code and you can combine it with your code to make it more efficient and adaptable.
+another third party package is tailwind CSS.

@@ -1,0 +1,171 @@
+Client-side is the front-end, server-side is the back-end.
+
+The front-end is the code which excutes on the vistor's machine, its the code which controls what the vistors see.
+The languages used for the front-end are HTML, CSS, JavaScript.
+
+The back-end is the code which executes on the server which is a remote machine, it's the code which controls what is being served and executes behind the scenes, it may parse and store incoming data, fetch data, store file ...
+To write server-side code you need a programming language which is executed by the server, not the browser because that's the front-end(client-side)
+The languages used for example Python, PHP, C#, Java, Node.js etc...
+
+A server is just a regular computer, it's called a server because it serves a website, it sends back responses to the browsers sending requests.
+
+Node.Js is "JavaScript for server-side", it is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js allows developers to execute JavaScript code on the server side, enabling server-side scripting and the development of network applications. (and your computer is your server)
+Node.js is basically javascript so rules of javascript still applies to it.
+Node.js is a tool not like word or excel after installing it you don't open it by clicking on it but you invoke it through the command line.
+
+The command line is text based interface that allows you to execute commands on your machine.
+Its a default tool pre-installed on every machine in macOS(Terminal),in Windows(Command prompt) and in Linux(Bash)
+
+You should type in the command line node then filename.js to get the results displayed in your terminal.
+
+note! node.js comes with a lot of packages that exposes different features that can be used in the node.js code for example node.js comes with a http package that gives us certain functionalities that we can use in our code to listen to incoming requests and to send back responses.
+
+In Node.js, the require keyword is used to import modules or libraries into your script. It allows you to access functionality defined in other files or built-in Node.js modules,
+Purpose: To load modules, libraries, or files into your current script so that you can use their functionality.
+
+Syntax: const moduleVariable = require('module-name'); //example of the module name is "http".
+moduleVariable: A variable that stores the imported module.
+module-name: The name of the module you want to load. This can be a built-in Node.js module (like http, fs, etc.), a third-party package installed via npm, or a local file (e.g., ./myModule.js).
+
+Common Use Cases:
+
+Importing built-in Node.js modules (like http, fs, path, etc.).
+Importing third-party libraries from npm (like express, mongoose, etc.).
+Importing custom modules that you define in your project.
+
+const http = require("http");
+const server = http.createServer(); // createServer returns an object which has all the server functionality that is required under the hood built in
+//and we just created a server, using the createServer that knows how to handle incoming requests
+
+In computer networking, a port is a communication endpoint that allows different applications and services to communicate via the Internet or a local network. Each port is identified by a number (e.g., 80, 443, 3000).
+
+server.listen(); //and here in the next step we start listening on a so colled port number
+// note Entrypoints for network traffic. Http requests sent from your browser to some remote machine require such an entrypoint in order to be handled by the server
+
+// for example we can enter amazon.com => sends a request to amazon's servers which will then return the website
+// Also every computer has different ports, and when you send a request to amazon.com:80 you send a request to port 80,
+// the ports 80 and 443 are the default ports exposed(opened) by all web servers to handle incoming traffic(requests)
+
+/* Ports 80 and 443 are commonly used in web communication, serving different purposes related to HTTP and HTTPS protocols:
+
+The differences between port 80 and port 443.
+Port 80
+Protocol: HTTP (Hypertext Transfer Protocol)
+Security: Not secure; data transferred over HTTP is transmitted as plain text, making it vulnerable to interception, eavesdropping, and man-in-the-middle attacks.
+Usage: This port is typically used for serving web pages and resources over the standard, unencrypted web. When you access a URL that starts with http://, your browser communicates over port 80.
+Default: If no port is specified in the URL, and the URL starts with http://, port 80 is used by default.
+
+Port 443
+Protocol: HTTPS (Hypertext Transfer Protocol Secure)
+Security: Secured by SSL/TLS (Secure Sockets Layer / Transport Layer Security); data transferred over HTTPS is encrypted, providing a secure channel between the web server and the browser.
+Usage: This port is used for secure communication over the internet. When you access a URL that starts with https://, your browser communicates over port 443.
+Default: If no port is specified in the URL, and the URL starts with https://, port 443 is used by default.
+*/
+The ports 80 and 443 are the default ports exposed(opened) by all web servers to handle incoming traffic(requests).
+
+but when working with node.js and creating your own server you need to let node.js to know on which port you want to listen 
+server.listen(3000);//this is port 3000 and it is a non-standard port commonly used for development purposes, particularly for running web applications, especially in environments using Node.js or other frameworks.
+
+Non-Standard Port: port 3000
+Unlike standard ports such as 80 (HTTP) and 443 (HTTPS), which are defined by Internet protocols for serving web traffic, port 3000 is not reserved for any particular service. This allows developers to use it for a variety of purposes without conflicting with traditional web services.
+
+Common Use Cases:
+Development: It is frequently used to run local web servers during development. Developers often choose port 3000 as a convention for running their applications because it is easy to remember and usually free of conflicts with other applications.
+In summary, using a non-standard port like 3000 minimizes the likelihood of port conflicts with other well-known web services or applications, enabling developers to run their services locally without the risk of interference.
+thats because if two applications are using the same port and run on the same server there would be a conflict.
+
+One process:
+note! One process per port: On a server, only one application (or process) can listen to a specific port at any given time. If an application is already using port 3000, another attempt to bind to that port will result in an error, typically indicating that the port is already in use. This prevents conflicts on the same port.
+If multiple applications are running on the same server, they can be configured to listen on different ports (e.g., one on port 3000, another on port 4000, etc.). This avoids conflicts because each application communicates on its own designated port.
+
+if we would then later deploy our code and move it to a real remot machine, which we rented from some hosting provider, we would swap this for 80 or 4-4-3 instead.
+
+//there are various status codes for example:
+200 means succeded, i.e. the request was parsed succefully a response could be generated + sent without any probelms and thats the status code beign used down in our code.
+404 client-side error! The requested resource/ URL was not found. Hence the requested response could not be generated.
+401 Client-side error! The requesting client (user) is not authorised to access the requested resource / URL (e.g. because not logged in)
+500 Server-side error! The request was valid but something went wrong on the server, hence the requested response could not be generated.
+
+function handleRequest(request, response) {
+  if (request.url === "/currenttime") {
+    // the request parameter and the dot notation .url, .url is a property in the request object of HTTP modules that contains the URL of the incoming request but the URL will not hold the full URL, it will hold the part after the domain i.e. the path
+    response.statusCode = 200; //we need to have a response send to the requests by the browser or else the browser will show errors for that the requests were not given any resposes.
+    //and here we are using the dot notation and we have various properties and methods that can be utilised here and the .statusCode is a way to tell the browser wether a request succeded or not.
+    response.end("<h1>" + new Date().toISOString() + "<h1>"); //the new keyword is a feature built-into JavaScript(browser and NodeJS that allows us to create JS objects based on certain "blueprints".)
+  } else if (request.url === "/") {
+    response.statusCode = 200;
+    response.end("<h1>Hello World!<h1>");
+  }
+}
+
+//just like we did with event listeners before when we add the handleRequest function between our brackets and we omit the parenthisis and also createServer wants a function as a parameter value and the function itself takes two parameter values
+const server = http.createServer(handleRequest); // create server returns an object which has all the server functionality that is required under the hood built in
+//and we just created a server, using the createServer that knows how to handle incoming requests
+
+server.listen(3000); //and here in the next step we start listening on a so colled port number
+// note Entrypoints for network traffic. Http requests sent from your browser to some remote machine require such an entrypoint in order to be handled by the server
+
+note! some of the reasons we use server-side code is to generate html dynamically i.e. show the user the html code depending on his request
+note typing localhost:the port number for e.g. localhost:3000, localhost refers to your own computer.
+note! the path leads to different pages in the same website, also the path should typically be all-lowercase with no special characters other than dashes(a convention), it should also describe the content of the page that can be expected (e.g. /users, /product-detail, ...).
+
+
+npm stands for node package manager.
+
+the (npm init) command is used to turn the standard folder on our system into a nodeJS managed project.
+the (npm install express) command to install one of third party packages which is listed in the official npm repository and express is one of the packages which can be installed via the npm install command.
+
+note! JSON is file format, its basically a standard text file but following certain formatting rules, it looks like a javascript object the difference is that all the keys are wrapped by double quotes, and its a standard format for submitting data.
+
+
+Using expressJS, a third party library which makes the use of node.js much more easier and enhanced.
+
+Express.js enhances the capabilities of Node.js by providing a robust set of features that simplify server-side programming. Its flexible, minimalist architecture makes it an excellent choice for both small and large-scale web applications and APIs.
+note! express is a package which has dependencies i.e. it also depends on other packages and all those packages are installed when you install express using the npm install command
+
+//const http = require("http"); because we're using express.js this code is no longer needed but instead we could use a much simpler code i.e.
+const express = require("express"); // its a function.
+
+
+/* we can get rid of this code because we can write a much simpler code using express.js
+
+function handleRequest(request, response) {
+  if (request.url === "/currenttime") {
+    // the request parameter and the dot notation .url, .url is a property in the request object of HTTP modules that contains the URL of the incoming request but the URL will not hold the full URL, it will hold the part after the domain i.e. the path
+    response.statusCode = 200; //we need to have a response send to the requests by the browser or else the browser will show errors for that the requests were not given any resposes.
+    //and here we are using the dot notation and we have various properties and methods that can be utilised here and the .statusCode is a way to tell the browser wether a request succeded or not.
+    response.end("<h1>" + new Date().toISOString() + "<h1>"); //the new keyword is a feature built-into JavaScript(browser and NodeJS that allows us to create JS objects based on certain "blueprints".)
+  } else if (request.url === "/") {
+    response.statusCode = 200;
+    response.end("<h1>Hello World!<h1>");
+  }
+}
+
+//just like we did with event listeners before when we add the handleRequest function between our brackets and we omit the parenthisis and also createServer wants a function as a parameter value and the function itself takes two parameter values
+const server = http.createServer(handleRequest); // create server returns an object which has all the server functionality that is required under the hood built in
+//and we just created a server, using the createServer that knows how to handle incoming requests
+
+server.listen(3000); //and here in the next step we start listening on a so colled port number
+// note Entrypoints for network traffic. Http requests sent from your browser to some remote machine require such an entrypoint in order to be handled by the server
+
+*/
+
+//all of the above code was literally replaced by the code below (without the notes) and the value is the same.
+
+const express = require("express");
+
+const app = express();
+
+//the get method define a request handler for incoming get requests. A get request is the default kind of request that is sent by a browser if you just enter a URL.
+//the get method has two parameters, the first one is the path and the second one is the function which should be executed for such incoming requests.
+app.get("/currenttime", function (request, responsee) { //note! we don't need to create a function outside and then execute it inside we can just create a function inside and write its code inside the method.
+  //in the function the first parameter is the request and the second parameter is the response (the names don't matter)
+  responsee.send("<h1>" + new Date().toISOString() + "<h1>");
+});
+
+app.get("/", function (request, responsee) {
+  responsee.send("<h1>Hello World</h1>");
+});
+
+app.listen(3000);
+

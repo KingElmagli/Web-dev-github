@@ -1,0 +1,14 @@
+{
+  "name": "day48",
+  "version": "1.0.0",
+  "description": "started using express.js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mustafa Elmagli",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
